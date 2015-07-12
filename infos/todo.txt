@@ -1,0 +1,34 @@
+X WP
+X FoundationPress
+
+- custom types / fields : recettes / produits / FAQ
+- options foundationpress (settings.css)
+- isotope
+X WPML
+- galeries / images aléatoires
+X lightbox
+X slider -> aussi pour carrousel images aléatoires
+- lier NL mailchimp (alain = mailchimp)
+X foundation shortcodes
+X no comment
+--
+
+
+> integration
+- strcuture de base : containers header/nav/sliders/sidebars
+- set d'icones légumes
+- nav
+
+
+> contenus
+- rubriques / menus / cats
+- articles types
+
+> GIT
+- dépôt projet
+
+
+
+
+---- !! ----
+Contenus devisé = 10 pagesx2 (trad)
