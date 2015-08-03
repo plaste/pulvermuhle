@@ -8,22 +8,28 @@
  */
 
 ?>
-<div id="preheader-bar" class="row">
-<div id="logo">Pulvermühle</div>
-	<div id="search">
-	<?php get_template_part('searchform'); ?>
-	</div>
-	<div id="header-langues">
-	<?php languages_list_header(); ?>
+<div class="full-width preheader-container show-for-medium-up">
+	<div id="preheader-bar" class="row">
+		<div id="logo">
+			<h1><a href="<?php echo home_url(); ?>"><img src="<?php bloginfo( 'template_url' ); ?>/img/pulvermuhle-head-logo.png" width="210" alt="<?php bloginfo( 'name' ); ?>, <?php bloginfo( 'description' ); ?>"></a></h1>
+		</div>
+	<!--
+		<div id="search">
+		<?php get_template_part('searchform'); ?>
+		</div>
+	-->
+		<div id="header-langues">
+		<?php languages_list_header(); ?>
+		</div>
+		<div id="newsletter-form">
+		<div class="title">Inscrivez-vous à la newsletter</div>
+		<?php get_template_part('parts/form', 'newsletter'); ?>
+		</div>
+		
 	</div>
 </div>
 <div class="top-bar-container contain-to-grid show-for-medium-up">
     <nav class="top-bar" data-topbar role="navigation">
-        <ul class="title-area">
-            <li class="name">
-                <h1><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-            </li>
-        </ul>
         <section class="top-bar-section">
             <?php foundationpress_top_bar_l(); ?>
             <?php foundationpress_top_bar_r(); ?>

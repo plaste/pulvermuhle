@@ -1,0 +1,1 @@
+<input type="text" class="newsletter-input" placeholder="Votre email">

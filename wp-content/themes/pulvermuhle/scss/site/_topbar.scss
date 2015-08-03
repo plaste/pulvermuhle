@@ -30,7 +30,30 @@
 // ---------------------------------------------------------
 // Pulvermühle
 // ---------------------------------------------------------
-#preheader-bar div {
-	float:left;
-	display:inline-block;
+
+.preheader-container {
+	background-color: $brun;
+}
+
+#preheader-bar {
+	height:rem-calc(100);
+	background-color: $brun;
+	
+	div#logo {
+		float:left;
+		display:inline-block;
+		margin:15px 15px 0 20px;
+	}
+	
+	div#newsletter-form {
+		float:right;
+		display:inline-block;
+		width:rem-calc(240);
+	}
+	
+	div#header-langues {
+		float:right;
+		display:inline-block;
+		width: rem-calc(155);
+	}
 }

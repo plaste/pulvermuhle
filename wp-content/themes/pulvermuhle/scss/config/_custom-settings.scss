@@ -4,13 +4,19 @@
 */
 
 // We use these to define default font stacks
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$typo-courant: "Ubuntu", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$typo-titres: "Amatic SC", cursive;
+
+$font-family-sans-serif: "Ubuntu", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to define default font weights
 $font-weight-normal: normal !default;
 $font-weight-bold: bold !default;
+
+// pulvermuhle couleurs
+$brun : #3b3429;
 
 // Foundation color naming conventions
 $white       : #FFFFFF;
@@ -50,6 +56,11 @@ $body-font-style: normal;
 $header-font-weight: 300;
 $header-text-rendering: optimizeLegibility;
 $topbar-link-weight: bold;
+
+$row-width: rem-calc(1280); // largeur sans marge 2X50px
+$row-full-width: rem-calc(1380); // avec marges blanches 2X50px
+$total-columns: 12;
+$column-gutter: rem-calc(0);
 
 // Media query breakpoints
 $small-breakpoint:  em-calc(640);
