@@ -7,13 +7,37 @@
 	h1 a { font-weight: 500; }
 }
 
+
+// fade effect pour le menu déroulant (source : http://foundation.zurb.com/forum/posts/8268-idea-fade-in-top-menu-dropdowns---any-feedback)
+&.hover, &.not-click:hover {
+    & > .dropdown {
+        opacity: 1; //Add this line.
+    }
+}
+
+.dropdown {
+    opacity: 0; //Add this line.
+    @include single-transition(opacity, 500ms, ease); //Add this line.
+}
+
+.no-js .top-bar-section {
+    .has-dropdown {
+        &:hover {
+            & > .dropdown {
+                opacity: 1; //Add this line.
+            }
+        }
+    }
+}
+// end fade menu déroulant
+
 // A more subtle background color for the active menu item
-.top-bar-section li.active:not(.has-form) a:not(.button)  {
-	background: #272727;
-}
-.top-bar-section li.active:not(.has-form) a:hover:not(.button) {
-	background: #202020;
-}
+//.top-bar-section li.active:not(.has-form) a:not(.button)  {
+//	background: #272727;
+//}
+//.top-bar-section li.active:not(.has-form) a:hover:not(.button) {
+//	background: #202020;
+//}
 
 // Switch between the mobile menu (tab-bar) and desktop menu (topbar) based on a custom $topbar-breakpoint value.
 // The $topbar-breakpoint can be edited in _custom-settings.scss. 
@@ -28,7 +52,220 @@
 }
 
 // ---------------------------------------------------------
-// Pulvermühle
+// Pulvermuhle menu principal
+// ---------------------------------------------------------
+.top-bar-section {
+	
+	ul#menu-menu-principal>li {
+    width: auto;
+    max-width: 15%;
+	}
+	
+	li a {
+    line-height: 1.4rem !important;
+	}
+	
+	ul#menu-menu-principal {
+		height:72px;
+		line-height: 72px;	
+	}
+	
+	ul#menu-menu-principal>li>a {
+		height:72px;
+		//border-top:10px solid #FFF;
+		line-height: 52px !important;
+		text-align:center;
+		font-weight:500;
+		text-transform: uppercase;
+		transition:all .3s;
+		padding:12px 29px 0 29px;
+	}
+	
+//	ul#menu-menu-principal>li>a:hover,ul#menu-menu-principal>li>a.active  {
+//		//border-top:10px solid #FFCC00;
+//		box-shadow:inset 0px 10px 0px 0px $couleur_presentation;
+//	}
+	
+	ul#menu-menu-principal>.divider {
+		width:5px;
+		height:5px;
+		background-color:#c8bfb0;
+		margin-top:36px;
+	}
+	
+	ul#menu-menu-principal>.divider:first-child {
+		display:none;	
+	}
+	
+	ul#menu-menu-principal>li.menu-item>ul.dropdown>li {
+		width:100%;
+		background-color:#fff;
+	}
+	ul#menu-menu-principal>li.menu-item>ul.dropdown>li a {
+		box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		width:100%;
+		line-height:16px;
+		height:auto;
+		white-space: normal;
+		text-align: center;
+		padding:20px 10px 20px 20px;
+		//border-left:1px solid #FFFFFF;
+		border-top:thin solid #CCC;
+		//border-bottom:thin solid #CCC;
+		transition: all .3s;
+		
+		//box-shadow:inset 0px 0px 0px 0px #000;
+	}
+	
+	// menus individuels, menus sur 2 lignes
+	ul#menu-menu-principal>li#menu-item-81>a, ul#menu-menu-principal>li#menu-item-80>a {
+		line-height:rem-calc(20) !important;
+		padding-top:20px;
+	}
+	
+	ul#menu-menu-principal>li:not(:first-child)::after {
+		content:"";
+		display:block;
+		width:5px;
+		height:5px;
+		position:relative;
+		background-color:#CCC;
+		left:0;
+		top:-38px;
+		z-index:500;
+	}
+	
+	ul#menu-menu-principal>li#menu-item-46>ul.dropdown {
+		transition:all .5s;
+	}
+
+	
+	//-------------------------------------------------------
+	// couleurs par rubrique
+	//-------------------------------------------------------
+	
+	// présentation
+	ul#menu-menu-principal>li#menu-item-46>ul.dropdown>li a {
+		border-top:1px solid $couleur_presentation_dropdownborder;
+	}
+	ul#menu-menu-principal li#menu-item-46:hover>a,ul#menu-menu-principal li#menu-item-46.active>a {
+		box-shadow:inset 0px 10px 0px 0px $couleur_presentation;
+		color:$couleur_presentation_textes;
+	}
+	ul#menu-menu-principal>li#menu-item-46>ul.dropdown>li a:hover,ul#menu-menu-principal>li#menu-item-46>ul.dropdown>li.active a {
+		box-shadow:inset 10px 0px 0px 0px $couleur_presentation;
+		color:$couleur_presentation_textes;
+	}
+	
+	// actualités
+	ul#menu-menu-principal>li#menu-item-56>ul.dropdown>li a {
+		border-top:1px solid $couleur_actualites_dropdownborder;
+	}
+	ul#menu-menu-principal li#menu-item-56:hover>a,ul#menu-menu-principal li#menu-item-56.active>a {
+		box-shadow:inset 0px 10px 0px 0px $couleur_actualites;
+		color:$couleur_actualites_textes;
+	}
+	ul#menu-menu-principal>li#menu-item-56>ul.dropdown>li a:hover,ul#menu-menu-principal>li#menu-item-56>ul.dropdown>li.active a {
+		box-shadow:inset 10px 0px 0px 0px $couleur_actualites;
+		color:$couleur_actualites_textes;
+	}
+	
+	// où trouver nos produits
+	ul#menu-menu-principal>li#menu-item-81>ul.dropdown>li a {
+		border-top:1px solid $couleur_outrouver_dropdownborder;
+	}
+	ul#menu-menu-principal li#menu-item-81:hover>a,ul#menu-menu-principal li#menu-item-81.active>a {
+		box-shadow:inset 0px 10px 0px 0px $couleur_outrouver;
+		color:$couleur_outrouver_textes;
+	}
+	ul#menu-menu-principal>li#menu-item-81>ul.dropdown>li a:hover,ul#menu-menu-principal>li#menu-item-81>ul.dropdown>li.active a {
+		box-shadow:inset 10px 0px 0px 0px $couleur_outrouver;
+		color:$couleur_outrouver_textes;
+	}
+	
+	// la vente aux professionnels
+	ul#menu-menu-principal>li#menu-item-80>ul.dropdown>li a {
+		border-top:1px solid $couleur_lavente_dropdownborder;
+	}
+	ul#menu-menu-principal li#menu-item-80:hover>a,ul#menu-menu-principal li#menu-item-80.active>a {
+		box-shadow:inset 0px 10px 0px 0px $couleur_lavente;
+		color:$couleur_lavente_textes;
+	}
+	ul#menu-menu-principal>li#menu-item-80>ul.dropdown>li a:hover,ul#menu-menu-principal>li#menu-item-80>ul.dropdown>li.active a {
+		box-shadow:inset 10px 0px 0px 0px $couleur_lavente;
+		color:$couleur_lavente_textes;
+	}
+	
+	// nos produits
+	ul#menu-menu-principal>li#menu-item-87>ul.dropdown>li a {
+		border-top:1px solid $couleur_nosproduits_dropdownborder;
+	}
+	ul#menu-menu-principal li#menu-item-87:hover>a,ul#menu-menu-principal li#menu-item-87.active>a {
+		box-shadow:inset 0px 10px 0px 0px $couleur_nosproduits;
+		color:$couleur_nosproduits_textes;
+	}
+	ul#menu-menu-principal>li#menu-item-87>ul.dropdown>li a:hover,ul#menu-menu-principal>li#menu-item-87>ul.dropdown>li.active a {
+		box-shadow:inset 10px 0px 0px 0px $couleur_nosproduits;
+		color:$couleur_nosproduits_textes;
+	}
+	
+	// nos recettes
+	ul#menu-menu-principal>li#menu-item-85>ul.dropdown>li a {
+		border-top:1px solid $couleur_nosrecettes_dropdownborder;
+	}
+	ul#menu-menu-principal li#menu-item-85:hover>a,ul#menu-menu-principal li#menu-item-85.active>a {
+		box-shadow:inset 0px 10px 0px 0px $couleur_nosrecettes;
+		color:$couleur_nosrecettes_textes;
+	}
+	ul#menu-menu-principal>li#menu-item-85>ul.dropdown>li a:hover,ul#menu-menu-principal>li#menu-item-85>ul.dropdown>li.active a {
+		box-shadow:inset 10px 0px 0px 0px $couleur_nosrecettes;
+		color:$couleur_nosrecettes_textes;
+	}
+	
+	// faq
+	ul#menu-menu-principal>li#menu-item-86>ul.dropdown>li a {
+		border-top:1px solid $couleur_faq_dropdownborder;
+	}
+	ul#menu-menu-principal li#menu-item-86:hover>a,ul#menu-menu-principal li#menu-item-86.active>a {
+		box-shadow:inset 0px 10px 0px 0px $couleur_faq;
+		color:$couleur_faq_textes;
+	}
+	ul#menu-menu-principal>li#menu-item-86>ul.dropdown>li a:hover,ul#menu-menu-principal>li#menu-item-86>ul.dropdown>li.active a {
+		box-shadow:inset 10px 0px 0px 0px $couleur_faq;
+		color:$couleur_faq_textes;
+	}
+	
+	// contact
+	ul#menu-menu-principal>li#menu-item-79>ul.dropdown>li a {
+		border-top:1px solid $couleur_contact_dropdownborder;
+	}
+	ul#menu-menu-principal li#menu-item-79:hover>a,ul#menu-menu-principal li#menu-item-79.active>a {
+		box-shadow:inset 0px 10px 0px 0px $couleur_contact;
+		color:$couleur_contact_textes;
+	}
+	ul#menu-menu-principal>li#menu-item-79>ul.dropdown>li a:hover,ul#menu-menu-principal>li#menu-item-79>ul.dropdown>li.active a {
+		box-shadow:inset 10px 0px 0px 0px $couleur_contact;
+		color:$couleur_contact_textes;
+	}
+	
+//	ul#menu-menu-principal>li::after {
+//		content:"";
+//		display:block;
+//		position:relative;
+//		width:5px;
+//		height:5px;
+//		background-color:#c8bfb0;
+//		right:0;
+//		top:50%;
+//	}
+	
+}
+
+
+// ---------------------------------------------------------
+// Pulvermühle preheader
 // ---------------------------------------------------------
 
 .preheader-container {
@@ -49,11 +286,38 @@
 		float:right;
 		display:inline-block;
 		width:rem-calc(240);
+		margin-right: 45px;
+    	margin-top: rem-calc(10);	
+		
+		.title {
+			color:#f8fce9;
+			font-size:rem-calc(14);
+			font-weight:700;
+			margin-bottom:rem-calc(5);
+		}
 	}
 	
 	div#header-langues {
 		float:right;
 		display:inline-block;
 		width: rem-calc(155);
+		text-align: center;
+		line-height: 100px;
+		font-size:rem-calc(20);
+		color:#c9e55a;
+		text-transform: uppercase;
+		background:url(../img/langues-bg-strilles.png) center center no-repeat;
+		margin-right:8px;
+		
+		a, a span.icl_lang_sel_current {
+			color:rgba(255,255,255,.3);
+			text-decoration: none;
+			transition:color .3s;
+		}
+		
+		a:hover, a span.icl_lang_sel_current:hover {
+			color:#c9e55a;
+		}
+		
 	}
 }

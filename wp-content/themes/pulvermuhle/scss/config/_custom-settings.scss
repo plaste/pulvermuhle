@@ -17,6 +17,42 @@ $font-weight-bold: bold !default;
 
 // pulvermuhle couleurs
 $brun : #3b3429;
+$top_menu_link:#746d62;
+$top_menu_link_hover:#7d9910;
+
+$couleur_presentation : #c9e55a;
+$couleur_presentation_textes : #7d9910;
+$couleur_presentation_dropdownborder : rgba(201,229,90,.5);
+
+
+$couleur_actualites : #eb6b5f;
+$couleur_actualites_textes : #eb6b5f;
+$couleur_actualites_dropdownborder : rgba(235,107,95,.5);
+
+$couleur_outrouver : #00d8eb;
+$couleur_outrouver_textes : #00d8eb;
+$couleur_outrouver_dropdownborder : rgba(0,216,235,.5);
+
+$couleur_lavente : #89d9b1;
+$couleur_lavente_textes : #89d9b1;
+$couleur_lavente_dropdownborder : rgba(137,217,177,.5);
+
+$couleur_nosproduits : #e77e23;
+$couleur_nosproduits_textes : #e77e23;
+$couleur_nosproduits_dropdownborder : rgba(231,126,35,.5);
+
+$couleur_nosrecettes : #9c59b8;
+$couleur_nosrecettes_textes : #9c59b8;
+$couleur_nosrecettes_dropdownborder : rgba(51,72,0,.5);
+
+$couleur_faq : #f1c40f;
+$couleur_faq_textes : #c9a514;
+$couleur_faq_dropdownborder : rgba(241,196,15,.5);
+
+$couleur_contact : #759201;
+$couleur_contact_textes : #759201;
+$couleur_contact_dropdownborder : rgba(117,146,1,.5);
+
 
 // Foundation color naming conventions
 $white       : #FFFFFF;
@@ -46,6 +82,56 @@ $alert-color: #f04124;
 $success-color: #43AC6A;
 $warning-color: #f08a24;
 $info-color: #a0d3e8;
+$topbar-bg-color: $white;
+$topbar-bg: $white;
+
+// $topbar-sticky-class: ".sticky";
+$topbar-arrows: false; //Set false to remove the triangle icon from the menu item
+// $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from dropdown subnavigation li//
+// $topbar-divider-border-bottom: solid 1px scale-color($topbar-bg-color, $lightness: 13%);
+
+// séparateurs menu principal
+$topbar-divider-border-top: none;
+$topbar-divider-border-bottom: none;
+
+// couleurs du menu principal
+$topbar-link-color: $top_menu_link;
+$topbar-link-color-hover: $top_menu_link_hover;
+$topbar-link-color-active: $top_menu_link_hover;
+$topbar-link-color-active-hover: $top_menu_link_hover;
+$topbar-link-weight: 500;
+$topbar-link-font-size: rem-calc(16);
+$topbar-link-hover-lightness: 0%;
+$topbar-link-bg: $white;
+$topbar-link-bg-hover: $white;
+$topbar-link-bg-color-hover: $white;
+$topbar-link-bg-active: $white;
+$topbar-link-bg-active-hover: $white;
+$topbar-link-font-family: $typo-courant;
+$topbar-link-text-transform: none;
+// $topbar-link-padding: ($topbar-height / 3);
+// $topbar-back-link-size: rem-calc(18);
+// $topbar-link-dropdown-padding: rem-calc(20);
+// $topbar-button-font-size: .75rem;
+// $topbar-button-top: 7px;
+
+// couleurs des sous-menu du menu principal
+$topbar-dropdown-bg: $white;
+$topbar-dropdown-link-color: $top_menu_link;
+$topbar-dropdown-link-color-hover: $top_menu_link_hover;
+$topbar-dropdown-link-bg: $white;
+$topbar-dropdown-link-bg-hover: $white;
+$topbar-dropdown-link-weight: $font-weight-normal;
+$topbar-dropdown-toggle-size: 5px;
+$topbar-dropdown-toggle-color: $top_menu_link;
+$topbar-dropdown-toggle-alpha: .4;
+
+$topbar-dropdown-label-color: $top_menu_link;
+$topbar-dropdown-label-text-transform: none;
+$topbar-dropdown-label-font-weight: 500;
+$topbar-dropdown-label-font-size: rem-calc(15);
+$topbar-dropdown-label-bg: $white;
+
 
 // We use these to control various global styles
 $body-bg: $white;

@@ -22,7 +22,8 @@ class Foundationpress_Top_Bar_Walker extends Walker_Nav_Menu {
 		$item_html = '';
 		parent::start_el( $item_html, $object, $depth, $args );
 
-		$output .= ( 0 == $depth ) ? '<li class="divider"></li>' : '';
+		// décommenter la ligne pour inclure le séparateur en bloc div
+		//$output .= ( 0 == $depth ) ? '<li class="divider"></li>' : '';
 
 		$classes = empty( $object->classes ) ? array() : (array) $object->classes;
 
