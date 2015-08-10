@@ -1,0 +1,12 @@
+/** These styles are used in your backend editor. **/
+
+	.citation {
+		font-style: italic;
+		font-weight:700;
+	}
+	
+	.chapeau {
+		font-size:24px;
+		line-height:34px;
+		font-weight: 700;
+	}

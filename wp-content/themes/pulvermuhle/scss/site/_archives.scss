@@ -1,0 +1,150 @@
+.post-archive.panel {
+	position: relative;
+	
+	.thumb-actualites {
+		width:100%;	
+	}
+	.thumb-produits {
+		display:inline-block;
+		float:left;
+		width:180px;
+	}
+	.thumb-actualites img,.thumb-produits img {
+		width:100%;	
+	}
+	
+	
+	
+	.post_date {
+		position:absolute;
+		top:20px;
+		left:20px;
+		width:auto;
+		height:auto;
+		background-color:$rouge;
+		font-size:rem-calc(14);
+		line-height:rem-calc(40);
+		font-weight:400;
+		color:#FFF;
+		padding:0 10px;
+		text-transform: uppercase;
+	}
+	
+	.content-actualites {
+		
+		padding : 20px 25px 0px 20px;
+		p {
+		font-size:rem-calc(14);
+		line-height:rem-calc(21);
+		color:$font-color-grey;
+		}
+		h2, h2 a{
+			font-size:rem-calc(33);
+			font-weight:700;
+			line-height: rem-calc(35);
+		}
+	}
+	
+	.content-produits {
+		display:inline-block;
+		float:left;
+		padding : 20px 25px 0px 20px;
+		width:65%;
+		p {
+		font-size:rem-calc(14);
+		line-height:rem-calc(21);
+		color:$font-color-grey;
+		}
+		h2, h2 a{
+			font-size:rem-calc(26);
+			font-weight:700;
+			line-height: rem-calc(28);
+			color:$bleu-dark;
+		}
+	}
+	
+	.read-more-container {
+		width:100%;
+		text-align: center;
+		border-top:1px solid #f8f8f8;
+		background-color: #fff;
+		position:relative;
+		bottom:0;
+		transition:background .3s;
+	}
+	.read-more-container:hover {
+		background-color: #f8f8f8;
+	}
+	
+	.read-more-container a {
+		font-size:rem-calc(16);
+		color:$font-color-grey;
+		text-decoration: none;
+		text-transform: uppercase;
+		line-height:rem-calc(50);
+	}
+}
+
+#featured-archive {
+margin-bottom:50px;	
+}
+
+.post-archive.featured {
+	position:relative;
+	
+	.post_date {
+		position:absolute;
+		top:20px;
+		left:20px;
+		width:auto;
+		height:auto;
+		background-color:$rouge;
+		font-size:rem-calc(14);
+		line-height:rem-calc(40);
+		font-weight:400;
+		color:#FFF;
+		padding:0 10px;
+		text-transform: uppercase;
+	}
+	
+	.content-actualites {
+		position:absolute;
+		bottom:0;
+		width:100%;
+		background:$rouge_alpha;
+		padding : 20px 25px 0px 20px;
+		
+		p {
+		font-size:rem-calc(16);
+		line-height:rem-calc(21);
+		color:#FFF;
+		}
+		h2, h2 a{
+			font-size:rem-calc(33);
+			font-weight:700;
+			line-height: rem-calc(35);
+			color:#FFF;
+		}
+		
+		.read-more-container {
+		position:absolute;
+		right:0;
+		bottom:0;
+		width:83px;
+		height:83px;
+		
+			a.read-more-link {
+				display: block;
+				width:83px;
+			height:83px;
+				background:url(../img/readmore-actus-home.jpg) center center no-repeat $rouge;
+				background-size:83px;
+			transition:background .3s;
+			}
+			a.read-more-link:hover {
+				background:url(../img/readmore-actus-home-hover.jpg) center center no-repeat #FFF;
+				background-size:83px;
+			}
+		}
+	}
+}

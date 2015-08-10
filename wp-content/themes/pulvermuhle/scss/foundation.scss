@@ -13,7 +13,7 @@
 @import "config/custom-settings"; // Or copy the stuff you need to change to this file and uncomment
 
 @import "../bower_components/foundation/scss/foundation/components/grid";
-//@import "../bower_components/foundation/scss/foundation/components/accordion";
+@import "../bower_components/foundation/scss/foundation/components/accordion";
 @import "../bower_components/foundation/scss/foundation/components/alert-boxes";
 @import "../bower_components/foundation/scss/foundation/components/block-grid";
 //@import "../bower_components/foundation/scss/foundation/components/breadcrumbs";
@@ -32,7 +32,7 @@
 //@import "../bower_components/foundation/scss/foundation/components/magellan";
 //@import "../bower_components/foundation/scss/foundation/components/orbit";
 @import "../bower_components/foundation/scss/foundation/components/pagination";
-//@import "../bower_components/foundation/scss/foundation/components/panels";
+@import "../bower_components/foundation/scss/foundation/components/panels";
 //@import "../bower_components/foundation/scss/foundation/components/pricing-tables";
 //@import "../bower_components/foundation/scss/foundation/components/progress-bars";
 //@import "../bower_components/foundation/scss/foundation/components/range-slider";
@@ -42,7 +42,7 @@
 //@import "../bower_components/foundation/scss/foundation/components/sub-nav";
 //@import "../bower_components/foundation/scss/foundation/components/switches";
 //@import "../bower_components/foundation/scss/foundation/components/tables";
-//@import "../bower_components/foundation/scss/foundation/components/tabs";
+@import "../bower_components/foundation/scss/foundation/components/tabs";
 //@import "../bower_components/foundation/scss/foundation/components/thumbs";
 //@import "../bower_components/foundation/scss/foundation/components/tooltips";
 @import "../bower_components/foundation/scss/foundation/components/top-bar";
@@ -69,3 +69,8 @@
 //@import "site/hero";
 @import "site/footer";
 @import "site/base";
+@import "site/home";
+@import "site/archives";
+@import "site/recettes";
+@import "site/soliloquy";
+@import "site/page-content";

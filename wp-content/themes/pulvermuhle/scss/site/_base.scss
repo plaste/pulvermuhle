@@ -3,5 +3,30 @@
 */
 
 section.container {
-margin:0 rem-calc(50);
+margin:0 rem-calc($body-LRmargin);
+}
+
+.clearer{
+clear:both;
+}
+
+.columns.lr-padding {
+padding-right:20px !important;
+}
+
+h1 a,h2 a,h3 a,h4 a,h5 a,h6 a,
+h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover{
+	text-decoration:none;
+}
+
+.grid-block-container ul, .grid-block-container ul li {
+	list-style-type: none;
+}
+
+.grid-block-container>li::before, ul.pagination li::before, ul.image-gallery li::before {
+display:none !important;
+}
+
+.row.white{
+background-color:$white;
 }

@@ -14,9 +14,21 @@ $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 // We use these to define default font weights
 $font-weight-normal: normal !default;
 $font-weight-bold: bold !default;
+$font-color-standard : #726e6a;
+$font-color-dark : #3b3429;
+$font-color-grey : #7d7d7d;
+$font-color-recettes : #726e6a;
+$font-color-footer: #676c53;
 
 // pulvermuhle couleurs
 $brun : #3b3429;
+$bleu : #008f91;
+$bleu-dark : #005657;
+$rouge : #eb6b5f;
+$rouge_alpha:rgba(125,11,0,.5);
+$vert-actu-titre:#60a985;
+$vert-actu:#202e16;
+$footer_bg : #ede9e3;
 $top_menu_link:#746d62;
 $top_menu_link_hover:#7d9910;
 
@@ -94,7 +106,7 @@ $topbar-arrows: false; //Set false to remove the triangle icon from the menu ite
 $topbar-divider-border-top: none;
 $topbar-divider-border-bottom: none;
 
-// couleurs du menu principal
+// couleurs par défaut du menu principal
 $topbar-link-color: $top_menu_link;
 $topbar-link-color-hover: $top_menu_link_hover;
 $topbar-link-color-active: $top_menu_link_hover;
@@ -115,7 +127,7 @@ $topbar-link-text-transform: none;
 // $topbar-button-font-size: .75rem;
 // $topbar-button-top: 7px;
 
-// couleurs des sous-menu du menu principal
+// couleurs par défaut des sous-menu du menu principal
 $topbar-dropdown-bg: $white;
 $topbar-dropdown-link-color: $top_menu_link;
 $topbar-dropdown-link-color-hover: $top_menu_link_hover;
@@ -132,8 +144,35 @@ $topbar-dropdown-label-font-weight: 500;
 $topbar-dropdown-label-font-size: rem-calc(15);
 $topbar-dropdown-label-bg: $white;
 
+// couleurs et réglages des panels (bloc page actualités/archives)
+// 21. Panels
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// $include-html-panel-classes: $include-html-classes;
+
+// We use these to control the background and border styles
+$panel-bg: #FFF;
+// $panel-border-style: solid;
+// $panel-border-size: 1px;
+// $callout-panel-bg: scale-color($primary-color, $lightness: 94%);
+
+// We use this % to control how much we darken things on hover
+// $panel-border-color: scale-color($panel-bg, $lightness: -11%);
+
+// We use these to set default inner padding and bottom margin
+$panel-margin-bottom: rem-calc(20);
+$panel-padding: 0;
+
+// We use these to set default font colors
+// $panel-font-color: $oil;
+// $panel-font-color-alt: $white;
+
+// $panel-header-adjust: true;
+// $callout-panel-link-color: $primary-color;
+// $callout-panel-link-color-hover: scale-color($callout-panel-link-color, $lightness: -14%);
 
 // We use these to control various global styles
+$body-LRmargin : 50;
 $body-bg: $white;
 $body-font-color: $jet;
 $body-font-family: $font-family-sans-serif;
@@ -151,6 +190,6 @@ $column-gutter: rem-calc(0);
 // Media query breakpoints
 $small-breakpoint:  em-calc(640);
 $medium-breakpoint: em-calc(1024);
-$topbar-breakpoint: em-calc(820);
-$large-breakpoint:  em-calc(1440);
+$topbar-breakpoint: em-calc(1024);
+$large-breakpoint:  em-calc(1380);
 $xlarge-breakpoint: em-calc(1920);

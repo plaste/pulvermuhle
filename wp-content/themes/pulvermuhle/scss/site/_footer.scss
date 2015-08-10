@@ -1,3 +1,61 @@
+#footer-container {
+	background-color:$footer_bg;
+    padding:0 rem-calc($body-LRmargin);
+	
+	color:$font-color-footer;
+	font-size:rem-calc(12);
+	line-h:em-calc(19);
+	text-transform: uppercase;
+	
+	>footer .columns:first-child {
+		margin-top:30px;	
+		margin-bottom:30px;	
+	}
+	
+	.textwidget {
+		margin-top:5px;
+	}
+	
+	ul.menu {
+		list-style: none;
+		padding:0;
+		margin:0;
+		
+		>li:not(:first-child)::after {
+		content:"";
+		display:block;
+		width:5px;
+		height:5px;
+		position:relative;
+		background-color:#CCC;
+		left:0;
+		top:-12px;
+		z-index:500;
+		}
+		
+		a {
+			font-size:rem-calc(14);
+			line-height: rem-calc(19);
+			color:$font-color-footer;
+			text-decoration: none;
+			transition:color .3s;
+			
+			padding:0 20px 0 20px;
+		}
+		li:first-child>a {
+			padding:0 20px 0 0;	
+		}
+		a:hover {
+			color:$rouge;
+		}	
+		li {
+			float:left;
+			display:inline-block;
+		}
+	}
+}
+
+
 // Add some whitespace above the footer for medium-up screens
 @media #{$medium-up} {
 	footer.row {

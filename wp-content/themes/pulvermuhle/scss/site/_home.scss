@@ -1,0 +1,87 @@
+#home-actualites {
+	background: url(../img/bg_content_actus.jpg) center center repeat;
+	
+	>header {
+		width:100%;
+		height:98px;
+		background: url(../img/bg_content_titre_actus.jpg) top left repeat #FFF;
+		
+		h1 {
+			font-family: $typo-titres;
+			font-size:rem-calc(40);
+			line-height:rem-calc(45);
+			color:$rouge;
+			margin-top:0;
+			padding-top:rem-calc(25);
+			text-align: center;
+		}
+	}
+	
+	.container_actualites {
+		
+	}
+	
+}
+
+.post-actualite {
+	width:385px;
+	background:#FFF;
+	margin:10px 20px;
+	float:left;
+	height:235px;
+	
+	.thumb-actualites {
+		width:385px;
+		height:85px;
+		margin:0;
+	}
+	
+	.content-actualites {
+		position:relative;
+	}
+	
+	h2 {
+	padding:15px 10px 10px 20px;	
+	}
+	
+	h2, h2 a, h2 a:hover {
+		font-size:rem-calc(20);
+		line-height:rem-calc(24);
+		color:$vert-actu-titre;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	
+	.entry-content {
+		font-size:rem-calc(16);
+		line-height:rem-calc(22);
+		color:$vert-actu;
+		padding:10px 5px 10px 20px;
+		width:300px;
+	}
+	
+	.read-more-container {
+		position:absolute;
+		right:0;
+		bottom:0;
+		width:83px;
+		height:83px;
+		
+		a.read-more-link {
+			display: block;
+			width:83px;
+		height:83px;
+			background:url(../img/readmore-actus-home.jpg) center center no-repeat $rouge;
+			background-size:83px;
+		transition:background .3s;
+		}
+		a.read-more-link:hover {
+			background:url(../img/readmore-actus-home-hover.jpg) center center no-repeat #FFF;
+			background-size:83px;
+		}
+
+	}
+	
+	
+	
+}

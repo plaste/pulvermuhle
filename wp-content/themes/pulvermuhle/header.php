@@ -49,5 +49,5 @@
 
 	<?php get_template_part( 'parts/top-bar' ); ?>
 
-<section class="container" role="document">
+<section class="container" data-equalizer role="document">
 	<?php do_action( 'foundationpress_after_header' ); ?>

@@ -8,7 +8,7 @@
  */
 
 ?>
-<div class="full-width preheader-container show-for-medium-up">
+<div class="full-width preheader-container show-for-large-up">
 	<div id="preheader-bar" class="row">
 		<div id="logo">
 			<h1><a href="<?php echo home_url(); ?>"><img src="<?php bloginfo( 'template_url' ); ?>/img/pulvermuhle-head-logo.png" width="210" alt="<?php bloginfo( 'name' ); ?>, <?php bloginfo( 'description' ); ?>"></a></h1>
@@ -28,7 +28,7 @@
 		
 	</div>
 </div>
-<div class="top-bar-container contain-to-grid show-for-medium-up">
+<div class="top-bar-container contain-to-grid show-for-large-up">
     <nav class="top-bar" data-topbar role="navigation">
         <section class="top-bar-section">
             <?php foundationpress_top_bar_l(); ?>

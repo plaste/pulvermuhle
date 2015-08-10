@@ -1,0 +1,12 @@
+.row.soliloquy .soliloquy-container .soliloquy-next,
+.row.soliloquy .soliloquy-container .soliloquy-prev {
+    display: block;
+    width: 82px;
+    height: 112px;
+    position: absolute;
+    top: 46%;
+    margin-top: -16px;
+    right: 10px;
+    z-index: 1320;
+    background: transparent;
+}

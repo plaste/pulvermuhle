@@ -1,0 +1,110 @@
+/* 
+	Pagezs types et styles de textes
+*/
+.page-text-content:not(.recette) {
+padding:50px 35px;
+}
+
+.page-header-padding {
+padding:50px 35px 35px 35px;;
+}
+
+.page-text-content {	background:url(../img/bg_content_textes.jpg) top left repeat;
+	
+	.image-gallery ul,.image-gallery li {
+    padding: 0 0px 0px 0;
+	line-height:0 !important;
+		font-size:0 !important;
+	}
+
+	
+	font-size:rem_calc(16);
+	font-weight:400;
+	line-height:rem-calc(30);
+	color: $font-color-standard;
+	
+	.thumb-single {
+		width:40%;
+		margin:0 0px 10px 20px;
+		float:right;
+		display:inline-block;
+	}
+	
+	
+	a, a:active, a:focus, a:hover {
+		color:$bleu;
+		text-decoration: underline;
+	}
+	
+	h1,h2,h3,h4,h5,h6 {
+		font-family : $typo-titres;
+		color:$bleu;
+		font-weight:700;
+	}
+	
+	h1 a,h2 a,h3 a,h4 a,h5 a,h6 a,
+	h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover{
+		text-decoration:none;
+		font-weight:700;
+	}
+	
+	
+	h1 {
+		font-size:rem-calc(48);
+		font-weight: 700;
+		line-height:rem-calc(60);
+		margin-bottom:rem-calc(40);
+	}
+	
+	b,strong {
+		color:$font-color-dark;
+		font-weight:700;
+	}
+	
+	ul {
+    	list-style: none;
+    	padding: 0px;
+		margin-left:0;
+	}
+	
+	ul > li::before {
+		content: '\25CF ';
+		font-size: 15px;
+		color: $rouge;
+		margin-right: 10px;
+		padding: 0px;
+		line-height: 15px;
+	}
+	
+	.citation {
+		font-style: italic;
+		font-weight:700;
+	}
+	
+	.chapeau {
+		display: block;
+		font-size:rem-calc(24);
+		line-height:rem-calc(34);
+		font-weight: 700;
+		margin:20px 0;
+	}
+	
+	.chapeau::before, .chapeau::after {
+		content:"";
+		display:block;
+		width:70px;
+		height:5px;
+		background-color:$rouge;
+		margin:25px 0;
+	}
+}
+
+@media #{$small-only} {
+.page-text-content .thumb-single {
+		width:100%;
+		margin:0 0 25px 0;
+		float:none;
+		display:block;
+	}
+	
+}

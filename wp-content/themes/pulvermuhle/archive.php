@@ -18,22 +18,67 @@
 
 get_header(); ?>
 
+<!-- slider -->
+<div class="row soliloquy">
+<?php
+if ( function_exists( 'soliloquy' ) ) { soliloquy( '11' ); }
+?>
+</div>
+<!-- /slider -->
+
 <div class="row">
 <!-- Row for main content area -->
-	<div class="small-12 large-8 columns" role="main">
+	<div class="small-12 large-8 columns page-text-content" role="main" data-equalizer-watch>
+		
+	<header>
+	<h1 class="title">Notre actualité</h1>
+	</header>
+		
+		<?php
+			$count=0;
+			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+	if ( have_posts() && $paged==1 ) : ?>
 
-	<?php if ( have_posts() ) : ?>
+		<?php /* Start the Loop */ 
+		
+		?>
+		<?php while ( have_posts() ) : the_post(); 
+		if ($count==0) { ?>
+			<?php get_template_part( 'content', 'archives-featured' ); ?>
+		<?php 
+				$count++;	   }
+endwhile; ?>
+
+
+	<?php 
+		
+		
+	endif; // End have_posts() check.
+		
+		?>
+		
+	<ul class="small-block-grid-1 medium-block-grid-2 grid-block-container">
+		
+	<?php 
+	$count=0;
+	if ( have_posts() ) :	?>
 
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'content', get_post_format() ); ?>
+			<?php 
+			if ($count>0 || $paged!=1) {
+			get_template_part( 'content', 'archives' ); 
+			}
+			$count++;
+			?>
 		<?php endwhile; ?>
 
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 
 	<?php endif; // End have_posts() check. ?>
-
+	</ul>
+		
 	<?php /* Display navigation to next/previous pages when applicable */ ?>
 	<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
 		<nav id="post-nav">

@@ -20,6 +20,12 @@ function foundationpress_theme_support() {
 
 	// Add post thumbnail support: http://codex.wordpress.org/Post_Thumbnails
 	add_theme_support( 'post-thumbnails' );
+	
+	add_image_size( 'actualites-home-thumbs', 770, 170, array( 'center', 'center' ) );
+	
+	add_image_size( 'single-thumbs', 880, false );
+	
+	add_image_size( 'archive-thumbs', 500, false );
 
 	// RSS thingy
 	add_theme_support( 'automatic-feed-links' );
