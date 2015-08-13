@@ -9,7 +9,8 @@ padding:50px 35px;
 padding:50px 35px 35px 35px;;
 }
 
-.page-text-content {	background:url(../img/bg_content_textes.jpg) top left repeat;
+.page-text-content {	
+	background:url(../img/bg_content_textes.jpg) top left repeat;
 	
 	.image-gallery ul,.image-gallery li {
     padding: 0 0px 0px 0;
@@ -96,6 +97,64 @@ padding:50px 35px 35px 35px;;
 		height:5px;
 		background-color:$rouge;
 		margin:25px 0;
+	}
+	
+	// type produits
+	article.produits {
+		h2 {
+			padding-left:rem-calc(30);
+			background: url(../img/icones/produit-titre.png) 0 11px no-repeat;
+			background-size: 18px;
+			display:inline-block;
+			margin-bottom:0;
+			margin-top:0;
+			
+			span.latin{
+				font-family:$font-family-sans-serif;
+				font-size:rem-calc(14);
+				line-height:rem-calc(16);
+				color:$font-color-grey;	
+				font-weight: 700;
+				margin-bottom:0;
+				white-space:nowrap;
+			}
+			
+		}
+		h2 a{
+			font-weight:700;
+			color:$bleu-dark;
+		}
+		div.varietes {
+			font-family:$font-family-sans-serif;
+			font-size:rem-calc(12);
+			line-height:rem-calc(13);
+			color:$font-color-grey;	
+			font-weight: 700;
+			padding-left:rem-calc(30);
+		}
+		.calendrier {
+
+			.mois {
+				height:50px;
+				text-align: center;
+				font-size:rem-calc(16);
+				color:$font-color-grey;
+			}
+
+			.mois .coche {
+				display:block;
+				width:16px;
+				height:18px;
+				border:thin solid #d7d7d7;
+				border-radius:1px;
+				margin:0 auto;
+			}
+
+			.mois .coche.active {
+				border:none;
+				background-color:$couleur_presentation;
+			}
+		}
 	}
 }
 
