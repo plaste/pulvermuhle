@@ -18,15 +18,7 @@
 
 get_header(); ?>
 
-<!-- slider -->
-<div class="row soliloquy">
-<?php
-if ( function_exists( 'soliloquy' ) ) { soliloquy( '11' ); }
-?>
-</div>
-<!-- /slider -->
-
-<div class="row">
+<div class="row"  data-equalizer>
 <!-- Row for main content area -->
 	<div class="small-12 large-8 columns page-text-content" role="main" data-equalizer-watch>
 		

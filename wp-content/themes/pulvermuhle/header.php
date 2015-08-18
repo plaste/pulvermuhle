@@ -48,6 +48,8 @@
 	<?php get_template_part( 'parts/off-canvas-menu' ); ?>
 
 	<?php get_template_part( 'parts/top-bar' ); ?>
+		
+	<?php get_template_part( 'parts/top-slider' ); ?>
 
-<section class="container" data-equalizer role="document">
+<section class="container" role="document">
 	<?php do_action( 'foundationpress_after_header' ); ?>

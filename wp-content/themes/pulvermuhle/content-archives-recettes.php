@@ -13,7 +13,7 @@
 <li>
 <article class="post-archive panel" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
-	<div class="post_date"><?php echo get_the_date() ?></div>
+	<div class="post_date"><?php echo get_the_date('F Y') ?></div>
 	
 	<div class="thumb-actualites">
 		<?php

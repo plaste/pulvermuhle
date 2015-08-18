@@ -1,3 +1,11 @@
+header.recettes-header {
+	background:url(../img/bg_content_textes.jpg) top left repeat;
+}
+.page-text-content.recette {
+	background-image:none;
+	background-color:#FFF;
+}
+
 .recettes {
 	.ingredients .block_titre {
 		width:100%;
@@ -43,13 +51,44 @@
 		color:$font-color-recettes;
 	}
 	
+	.informations {
+		margin-top:15px;
+		
+		.picto {
+			display: inline-block;
+			/* width: 55px; */
+			/* height: 53px; */
+			vertical-align: middle;
+			margin: 0;
+			padding: 26px;
+			margin-bottom: 11px;
+		}
+		.picto.difficulte {
+			background: url(../img/pictos/picto_difficulte.png) top left no-repeat #008f91;
+			background-size: 53px;
+		}
+		.picto.temps {
+			background: url(../img/pictos/picto_temps.png) top left no-repeat #008f91;
+			background-size: 53px;
+		}
+		.picto.cuisson {
+			background: url(../img/pictos/picto_cuisson.png) top left no-repeat #008f91;
+			background-size: 53px;
+		}
+		.picto.portions {
+			background: url(../img/pictos/picto_portions.png) top left no-repeat #008f91;
+			background-size: 53px;
+		}
+	}
+	
 	.informations .titre {
 		font-family:$typo-titres;
 		color:$rouge;
 		font-weight:700;
 		font-size:rem-calc(26);
-		line-height:rem-calc(28);
+		line-height:rem-calc(53);
 		text-transform:uppercase;
+
 	}
 	
 	.informations .information {
@@ -58,6 +97,7 @@
 		color:$font-color-recettes;
 		padding-left:10px;
 		text-transform:uppercase;
+		white-space: nowrap;
 	}
 	
 	.informations .icone {

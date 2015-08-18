@@ -1,7 +1,7 @@
 <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 	
 
-<header class="page-header-padding">
+<header class="page-header-padding recettes-header">
 	<h1 class="entry-title"><?php the_title(); ?></h1>
 </header>
 
@@ -46,16 +46,16 @@
 <!-- informations -->
 <div class="row white informations">
 	<div class="small-12 medium-6 columns info-item">
-	<span class="titre">Difficulté : </span><span class="information"><?php echo types_render_field("difficulte", array("raw" => "true")); ?></span>
+	<span class="picto difficulte"></span>&nbsp;<span class="titre">Difficulté : </span><span class="information"><?php echo types_render_field("difficulte", array("raw" => "true")); ?></span>
 	</div>
 	<div class="small-12 medium-6 columns info-item">
-	<span class="titre">Temps de préparation : </span><span class="information"><?php echo types_render_field("temps-de-preparation", array("raw" => "true")); ?></span>
+	<span class="picto temps"></span>&nbsp;<span class="titre">Temps de préparation : </span><span class="information"><?php echo types_render_field("temps-de-preparation", array("raw" => "true")); ?></span>
 	</div>
 	<div class="small-12 medium-6 columns info-item">
-	<span class="titre">Portions : </span><span class="information"><?php echo types_render_field("portions", array("raw" => "true")); ?></span>
+	<span class="picto portions"></span>&nbsp;<span class="titre">Portions : </span><span class="information"><?php echo types_render_field("portions", array("raw" => "true")); ?></span>
 	</div>
 	<div class="small-12 medium-6 columns info-item">
-	<span class="titre">temps de cuisson : </span><span class="information"><?php echo types_render_field("temps-de-cuisson", array("raw" => "true")); ?></span>
+	<span class="picto cuisson"></span>&nbsp;<span class="titre">temps de cuisson : </span><span class="information"><?php echo types_render_field("temps-de-cuisson", array("raw" => "true")); ?></span>
 	</div>
 </div>
 <!-- /informations -->
@@ -64,7 +64,7 @@
 <div class="row white preparation">
 <?php do_action( 'foundationpress_page_before_entry_content' ); ?>
 			<div class="entry-content">
-<h3>Préparation</h3>
+				<h3 class="dark">Préparation</h3>
 				<?php the_content(); ?>
 			</div>
 	</div>

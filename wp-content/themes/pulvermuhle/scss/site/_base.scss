@@ -24,6 +24,10 @@ h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover{
 	text-decoration:none;
 }
 
+h1.dark, h2.dark, h3.dark, h4.dark, h5.dark, h6.dark {
+color:$bleu-dark !important;	
+}
+
 .grid-block-container ul, .grid-block-container ul li {
 	list-style-type: none;
 }

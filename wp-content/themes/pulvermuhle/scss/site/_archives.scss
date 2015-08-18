@@ -1,3 +1,51 @@
+// pages d'archives et taxonomies
+
+header.archives {
+    background-color: #FFF;
+    margin: 0;
+    padding: 30px;
+    position: relative;
+    left: -35px;
+    top: -50px;
+    width: 150%;
+}
+
+.second-menu-container {
+	ul,li {
+		list-style-type:none;
+		padding:0;
+		margin:0;
+	}
+	li {
+		float:left;
+		display: inline-block;
+	}
+	ul.menu>li::before {
+    content: '\25fc';
+    font-size: 15px;
+    color: $gris-light;
+    margin-left: 10px;
+    padding: 0px;
+    line-height: 15px;
+	}
+	li a {
+		font-size:rem-calc(14);
+		line-height:rem-calc(21);
+		font-weight:400;
+		color:$font-color-grey;
+		text-decoration:none;
+		text-transform: uppercase;
+		border-bottom:1px solid #FFF;
+		transition:all .3s;
+	}
+	li a:hover, li a:active, li a:focus, li.active a {
+		border-bottom:thin solid $font-color-dark;
+		text-decoration:none;
+		color:$font-color-grey;
+	}
+}
+
+// panels
 .post-archive.panel {
 	position: relative;
 	
@@ -79,7 +127,8 @@
 				font-size:rem-calc(14);
 				line-height:rem-calc(16);
 				color:$font-color-grey;	
-				font-weight: 700;
+					font-style:italic;
+				font-weight: 400;
 				margin-bottom:0;
 				white-space:nowrap;
 			}
@@ -93,8 +142,8 @@
 		}
 		div.varietes {
 			font-family:$font-family-sans-serif;
-			font-size:rem-calc(12);
-			line-height:rem-calc(13);
+			font-size:rem-calc(14);
+			line-height:rem-calc(16);
 			color:$font-color-grey;	
 			font-weight: 700;
 			padding-left:rem-calc(30);
@@ -133,6 +182,9 @@
 			text-align: center;
 			font-size:rem-calc(16);
 			color:$font-color-grey;
+		}
+		.mois b {
+			color:$bleu !important;
 		}
 		
 		.mois .coche {
@@ -173,23 +225,27 @@ margin-bottom:50px;
 		text-transform: uppercase;
 	}
 	
+	
+	
 	.content-actualites {
 		position:absolute;
 		bottom:0;
 		width:100%;
 		background:$rouge_alpha;
-		padding : 20px 25px 0px 20px;
+		padding : 10px 25px 0px 20px;
 		
 		p {
 		font-size:rem-calc(16);
 		line-height:rem-calc(21);
 		color:#FFF;
+		margin-bottom:12px;
 		}
 		h2, h2 a{
 			font-size:rem-calc(33);
 			font-weight:700;
 			line-height: rem-calc(35);
 			color:#FFF;
+			margin-bottom: 2px;
 		}
 		
 		.read-more-container {
@@ -213,6 +269,35 @@ margin-bottom:50px;
 			}
 		}
 	}
+}
+	
+.recettes .post-archive.featured .post_date, .recettes .post-archive.panel .post_date {
+	background:$bleu;
+}
+.recettes .post-archive.featured .content-actualites {
+	background:$bleu_alpha;
+}
+
+// pagination
+ul.pagination li.current a:hover, ul.pagination li.current a:focus, ul.pagination li.current button:hover, ul.pagination li.current button:focus {
+text-decoration:none;	
+}
+
+ul.pagination li a, ul.pagination li button {
+    border-radius: 1px;
+    transition: background-color 300ms ease-out;
+    background: #fff;
+    color: $font-color-grey;
+    display: block;
+    font-size: 1em;
+    font-weight: normal;
+    line-height: inherit;
+    padding: rem-calc(10);
+	text-decoration:none;	
+}
+
+ul.pagination li a:hover, ul.pagination li button:hover {
+	text-decoration:none;	
 }
 
 @media #{$small-only} {

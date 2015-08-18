@@ -43,7 +43,7 @@ $main_term = $term_list[0];
 				<?php echo types_render_field("nom-latin", array("raw" => "true")); ?>
 			<?php 
 				$famille=types_render_field("famille", array("raw" => "true"));
-				if (strlen($famille)>2) echo ' / '.$famille;
+				if (strlen($famille)>2) echo '&nbsp;/ '.$famille;
 			?>
 			</span>
 		</h2>
@@ -52,7 +52,7 @@ $main_term = $term_list[0];
 				$varietes=types_render_field("varietes", array("raw" => "true"));
 				if (strlen($varietes)>2) echo '
 				<div class="varietes">
-				('.$varietes.')</div>
+				'.$varietes.'</div>
 				'; 
 			?>
 			<?php //echo $main_term ?>
@@ -73,11 +73,16 @@ $main_term = $term_list[0];
 		$mois_selection_get = types_render_field("mois-production", array("separator"=>", ","html" => "true"));
 		$mois_selection=explode(",",$mois_selection_get);
 		$mois_actuel=1;
+		$mois_today=date('n');
 		foreach($mois as $value) {
 			
 			if (in_array($mois_actuel,$mois_selection)) $addclass="active";
 			else $addclass="";
-			echo '<div class="mois small-2 medium-1 columns nolr-padding"><div class="coche  '.$addclass.'"></div>'.$value.'</div>';
+			echo '<div class="mois small-2 medium-1 columns nolr-padding"><div class="coche  '.$addclass.'"></div>';
+			if ($mois_today==$mois_actuel) echo '<b>';
+			echo $value;
+			if ($mois_today==$mois_actuel) echo '</b>';
+			echo '</div>';
 			
 			$mois_actuel++;
 		}

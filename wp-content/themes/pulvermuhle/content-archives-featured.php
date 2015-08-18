@@ -15,16 +15,19 @@
 	<div class="post_date"><?php the_date() ?></div>
 	
 	<div class="thumb-actualites">
-	
 		<?php
 if ( has_post_thumbnail() ) {
-	
-			the_post_thumbnail('single-thumbs');                  
-		
-		} else {
-	?>
+	echo '<a href="' . get_the_permalink() . '" title="' . esc_attr( get_the_title() ) . '">';
+	the_post_thumbnail('single-thumbs');   
+	echo '</a>'; 
 
-		<?php } ?>
+} else {
+	echo '<a href="' . get_the_permalink() . '" title="' . esc_attr( get_the_title() ) . '">';
+?>
+		<img src="<?php bloginfo('template_url')?>/img/recette-thumb-defaut.jpg" class="attachment-actualites-home-thumbs wp-post-image" alt="<?php echo esc_attr( get_the_title() ) ?> ">
+<?php
+	echo '</a>';  
+} ?>
 			
 	</div>
 	

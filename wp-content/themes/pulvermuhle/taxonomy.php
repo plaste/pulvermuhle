@@ -14,62 +14,52 @@
  * @package WordPress
  * @subpackage FoundationPress
  * @since FoundationPress 1.0
- */
+*/
 
 get_header(); ?>
 
-<!-- slider -->
-<div class="row soliloquy">
-<?php
-if ( function_exists( 'soliloquy' ) ) { soliloquy( '11' ); }
-?>
-</div>
-<!-- /slider -->
-
-<div class="row">
+<div class="row produits archiverow" data-equalizer>
 <!-- Row for main content area -->
 	<div class="small-12 large-8 columns page-text-content" role="main" data-equalizer-watch>
 		
-	<header>
-	<h1 class="title">Nos produits</h1>
+	<header class="archives">
+	<h1 class="title">Notre production au fil des saisons</h1>
+		<div class="row second-menu-container">
+		<?php
+		$second_menu = array(
+			'theme_location'  => '',
+			'menu'            => 'Menu produits',
+			'container'       => 'div',
+			'container_class' => '',
+			'container_id'    => '',
+			'menu_class'      => 'menu',
+			'menu_id'         => '14',
+			'echo'            => true,
+			'fallback_cb'     => 'wp_page_menu',
+			'before'          => '',
+			'after'           => '',
+			'link_before'     => '',
+			'link_after'      => '',
+			'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+			'depth'           => 0,
+			'walker'          => ''
+		);
+		wp_nav_menu($second_menu);
+		?>
+	</div>
 	</header>
 		
-		<?php
-			$count=0;
-			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-	if ( have_posts() && $paged==1 ) : ?>
-
-		<?php /* Start the Loop */ 
+		<header><h2><?php echo $wp_query->queried_object->name; ?></h2></header>
 		
-		?>
-		<?php while ( have_posts() ) : the_post(); 
-		if ($count==0) { ?>
-			<?php get_template_part( 'content', 'archives-featured' ); ?>
-		<?php 
-				$count++;	   }
-endwhile; ?>
-
-
-	<?php 
-		
-		
-	endif; // End have_posts() check.
-		
-		?>
-		
-	<ul class="small-block-grid-1 medium-block-grid-2 grid-block-container">
+	<div class="row">
 		
 	<?php 
-	$count=0;
 	if ( have_posts() ) :	?>
 
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php 
-			if ($count>0 || $paged!=1) {
 			get_template_part( 'content', 'archives-produits' ); 
-			}
-			$count++;
 			?>
 		<?php endwhile; ?>
 
@@ -77,7 +67,7 @@ endwhile; ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 
 	<?php endif; // End have_posts() check. ?>
-	</ul>
+	</div>
 		
 	<?php /* Display navigation to next/previous pages when applicable */ ?>
 	<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
@@ -89,5 +79,6 @@ endwhile; ?>
 
 	</div>
 	<?php get_sidebar(); ?>
+	<div class="clearer"></div>
 </div>
 <?php get_footer(); ?>

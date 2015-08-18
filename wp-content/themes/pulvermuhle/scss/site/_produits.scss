@@ -1,0 +1,80 @@
+// type produits singles
+.page-text-content {
+
+	article.produits {
+		header::after {
+		content:"";
+		display:block;
+		width:70px;
+		height:5px;
+		background-color:$rouge;
+		margin:25px 0;
+		}
+
+		h1 {
+			padding-left:rem-calc(30);
+			background: url(../img/icones/produit-titre.png) 0 27px no-repeat;
+			background-size: 18px;
+			display:inline-block;
+			margin-bottom:0;
+			margin-top:0;
+		}
+		div.varietes {
+				font-family:$typo-titres;
+				font-size:rem-calc(32);
+				line-height:rem-calc(35);
+				color:$rouge;	
+				font-weight: 700;
+				//padding-left:rem-calc(30);
+			}
+		.informations {
+			div.info{
+				padding-top:10px;
+				//padding-left:rem-calc(30);
+				.title {
+					font-family:$font-family-sans-serif;
+					color:$rouge;
+					font-size:rem-calc(18);
+					line-height:rem-calc(18);
+					font-weight: 400;
+				}
+					font-family:$font-family-sans-serif;
+					font-size:rem-calc(18);
+					line-height:rem-calc(20);
+					color:$bleu-dark;	
+					font-weight: 400;
+					margin-bottom:0;
+			}
+			
+		}
+		.calendrier {
+			padding-top:15px;
+			
+			.mois {
+				height:50px;
+				text-align: center;
+				font-size:rem-calc(16);
+				color:$font-color-grey;
+			}
+
+			.mois .coche {
+				display:block;
+				width:16px;
+				height:18px;
+				border:thin solid #d7d7d7;
+				border-radius:1px;
+				margin:0 auto;
+				background-color:#FFF;
+			}
+			
+			.mois b {
+				color:$bleu !important;
+			}
+
+			.mois .coche.active {
+				border:none;
+				background-color:$couleur_presentation;
+			}
+		}
+	}
+}

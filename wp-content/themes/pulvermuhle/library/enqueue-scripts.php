@@ -24,6 +24,15 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 
 	// Fastclick removes the 300ms delay on click events in mobile environments. Must be placed in header. (Not required).
 	wp_register_script( 'fastclick', get_template_directory_uri() . '/js/vendor/fastclick.js', array(), '1.0.0', false );
+		
+	// masonry
+	wp_register_script( 'masonry', get_template_directory_uri() . '/js/vendor/masonry.js', array(), '1.0', false );
+		
+   // imagesloaded.js http://imagesloaded.desandro.com/
+    wp_register_script( 'imagesloaded', get_template_directory_uri() . '/js/vendor/imagesloaded.pkgd.min.js', array(), '1.0.0', true );
+	
+	// site custom
+	wp_register_script( 'sitecustom', get_template_directory_uri() . '/js/custom/site.js', array(), '1.0', true );
 
 	// CDN hosted jQuery placed in the header, as some plugins require that jQuery is loaded in the header.
 	wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js', array(), '2.1.0', false );
@@ -37,6 +46,9 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	wp_enqueue_script( 'fastclick' );
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'foundation' );
+	wp_enqueue_script( 'masonry' );
+	wp_enqueue_script('imagesloaded');
+	wp_enqueue_script( 'sitecustom' );
 
 	}
 

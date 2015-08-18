@@ -18,23 +18,37 @@
 
 get_header(); ?>
 
-<!-- slider -->
-<div class="row soliloquy">
-<?php
-if ( function_exists( 'soliloquy' ) ) { soliloquy( '11' ); }
-?>
-</div>
-<!-- /slider -->
-
-<div class="row recettes">
+<div class="row produits archiverow" data-equalizer>
 <!-- Row for main content area -->
 	<div class="small-12 large-8 columns page-text-content" role="main" data-equalizer-watch>
 		
-	<header>
-	<h1 class="title">Nos produits</h1>
+	<header class="archives">
+	<h1 class="title">Notre production au fil des saisons</h1>
+		<div class="row second-menu-container">
+		<?php
+		$second_menu = array(
+			'theme_location'  => '',
+			'menu'            => 'Menu produits',
+			'container'       => 'div',
+			'container_class' => '',
+			'container_id'    => '',
+			'menu_class'      => 'menu',
+			'menu_id'         => '14',
+			'echo'            => true,
+			'fallback_cb'     => 'wp_page_menu',
+			'before'          => '',
+			'after'           => '',
+			'link_before'     => '',
+			'link_after'      => '',
+			'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+			'depth'           => 0,
+			'walker'          => ''
+		);
+		wp_nav_menu($second_menu);
+		?>
+	</div>
 	</header>
 		
-
 	<div class="row">
 		
 	<?php 
@@ -63,5 +77,6 @@ if ( function_exists( 'soliloquy' ) ) { soliloquy( '11' ); }
 
 	</div>
 	<?php get_sidebar(); ?>
+	<div class="clearer"></div>
 </div>
 <?php get_footer(); ?>

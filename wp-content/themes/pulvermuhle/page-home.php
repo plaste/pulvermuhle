@@ -4,13 +4,6 @@ Template Name: page d'accueil
 */
 get_header(); ?>
 
-<!-- slider -->
-<div class="row soliloquy">
-<?php
-if ( function_exists( 'soliloquy' ) ) { soliloquy( '11' ); }
-?>
-</div>
-<!-- /slider -->
 <!-- contenu -->
 <div class="row" data-equalizer>
 	
