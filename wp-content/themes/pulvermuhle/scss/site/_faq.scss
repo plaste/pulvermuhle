@@ -1,0 +1,23 @@
+.hrf-entry p {
+    white-space: normal;
+}
+
+article .entry-content code {
+    background-color: #f8f8f8;
+    border-color: #dfdfdf;
+    border-style: solid;
+    border-width: 0px;
+    color: $font-color-standard;
+    font-family: $font-family-sans-serif;
+    font-weight: normal;
+    padding: 0;
+}
+
+.page-text-content pre {
+	line-height: 2px;
+	overflow:hidden;
+}
+
+.hrf-title.close-faq span {
+    top: 4px;
+}

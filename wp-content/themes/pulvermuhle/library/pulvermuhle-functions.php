@@ -170,4 +170,42 @@ function languages_list_header(){
 		echo $selector;
     }
 }
+
+// ---------------------------------------------------------------------
+// Soliloquy
+// ---------------------------------------------------------------------
+// Ajoute le lien image (flèche)
+add_filter( 'soliloquy_output_caption', 'soliloquy_readmore_arrow_after_caption', 10, 5 );
+function soliloquy_readmore_arrow_after_caption( $caption, $id, $slide, $data, $i ) {
+    
+    $basementCaption=$slide['caption'];
+    //$modifiedCaption=str_replace("</div>", "&nbsp;<span class='shk_readmore_slider'><img src='".get_template_directory_uri()."/img/slider-header-readmore-arrow.png' /></span></a></h2>", $basementCaption);
+	
+	if (isset($slide['link']) && strlen($slide['link'])>5) {
+		$modifiedCaption='<a href="'.$slide['link'].'">'.$basementCaption.'</a><div class="call2action"><a href="'.$slide['link'].'"></a></div>';
+	} else {
+		$modifiedCaption=$basementCaption.'<div class="call2border"></div>';
+	}
+	
+	// Check if current slide has a title specified
+    $caption = '<div class="caption">' . $modifiedCaption . '</div>'; 
+    
+        return $caption;
+}
+
+// exclure sliders des résultats de recherche
+function soliloquy_exclude_from_search( $args ) {
+	$args['exclude_from_search'] = true;
+	return $args;
+}
+add_filter( 'soliloquy_post_type_args', 'soliloquy_exclude_from_search' );
+
+// no lightbox on mobiles
+function soliloquy_disable_mobile_lightbox( ) {
+	// If on a mobile device, unhook the Lightbox Addon
+	if ( ! is_admin() && wp_is_mobile() ) {
+		remove_action( 'soliloquy_init', 'soliloquy_lightbox_plugin_init' );
+	}
+}
+add_action( 'plugins_loaded', 'soliloquy_disable_mobile_lightbox', 99 );
 ?>
