@@ -6,11 +6,11 @@ get_header(); ?>
 
 <!-- contenu -->
 <div class="row">
-
+	
 	<div class="row" data-equalizer>
-
+		
 	<div class="small-12 large-8 columns" data-equalizer-watch>
-
+	
 		<div class="small-12 large-6 columns show-for-large-up" role="presentation" data-equalizer-watch>
 			<!-- left home sidebar -->
 			<?php do_action( 'foundationpress_before_sidebar' ); ?>
@@ -23,10 +23,10 @@ get_header(); ?>
 			</header>
 
 		<?php do_action( 'foundationpress_before_content' ); ?>
-
-
+			
+			
 		<!-- actualités -->
-		<?php
+		<?php 
 		// query
 		$parent_post_type= get_post_type();
 		$childargs = array(
@@ -54,14 +54,14 @@ get_header(); ?>
 		/* Restore original Post Data */
 		wp_reset_postdata();
 		?>
-
+	
 	</div>
 	<!-- end actualités -->
 		<?php do_action( 'foundationpress_after_content' ); ?>
 
 		</div>
 		</div>
-
+		
 		<div class="small-12 large-4 columns" data-equalizer-watch>
 	<!-- encarts en image (provisoires) -->
 	<div class="row">
@@ -73,11 +73,11 @@ get_header(); ?>
 		<?php get_template_part("parts/random-image"); ?>
 	</div>
 			</div>
-
+		
 	</div>
-
+		
 	</div>
-
+	
 	<div class="row" data-equalizer>
 		<div class="small-12 large-8 columns" data-equalizer-watch>
 		<div class="small-12 columns show-for-large-up">
@@ -90,7 +90,7 @@ get_header(); ?>
 			<?php do_action( 'foundationpress_after_sidebar' ); ?>
 		</div>
 	</div>
-
+			
 	<div class="columns small-12 large-4 columns" data-equalizer-watch>
 			<!-- right home bottom sidebar -->
 			<?php do_action( 'foundationpress_before_sidebar' ); ?>
@@ -98,8 +98,8 @@ get_header(); ?>
 			<?php do_action( 'foundationpress_after_sidebar' ); ?>
 	</div>
 	</div>
-
-
+	
+	
 
 <!-- /contenu -->
 <?php get_footer(); ?>
