@@ -6,10 +6,10 @@ get_header(); ?>
 
 <!-- contenu -->
 <div class="row" data-equalizer>
-	
+
 	<div class="small-12 large-8 columns" >
-	
-		<div class="small-12 medium-6 columns show-for-large-up" role="presentation" data-equalizer-watch>
+
+		<div class="update small-12 medium-6 columns show-for-large-up" role="presentation" data-equalizer-watch>
 			<img src="<?php bloginfo('template_url') ?>/img/fake_encarts_03.jpg">
 		</div>
 		<div id="home-actualites" class="small-12 large-6 columns" role="main" data-equalizer-watch>
@@ -18,10 +18,10 @@ get_header(); ?>
 			</header>
 
 		<?php do_action( 'foundationpress_before_content' ); ?>
-			
-			
+
+
 		<!-- actualités -->
-		<?php 
+		<?php
 		// query
 		$parent_post_type= get_post_type();
 		$childargs = array(
@@ -49,16 +49,16 @@ get_header(); ?>
 		/* Restore original Post Data */
 		wp_reset_postdata();
 		?>
-	
+
 	</div>
 	<!-- end actualités -->
 		<?php do_action( 'foundationpress_after_content' ); ?>
 
 		</div>
 		</div>
-		
+
 		<div class="small-12 large-4 columns" data-equalizer-watch>
-	<!-- encarts en image (provisoires) -->
+	<!-- encarts en image -->
 	<div class="row">
 	<div class="columns small-6 medium-4 large-12">
 	<img src="<?php bloginfo('template_url'); ?>/img/fake_widget_recettes.jpg">
@@ -66,10 +66,10 @@ get_header(); ?>
 	<img src="<?php bloginfo('template_url'); ?>/img/fake_widget_image_2.jpg">
 	</div>
 			</div>
-		
+
 	</div>
-	
-	
+
+
 	<div class="row">
 		<div class="small-12 medium-8 columns">
 		<div class="small-12 columns show-for-medium-up">
@@ -79,13 +79,13 @@ get_header(); ?>
 			<img src="<?php bloginfo('template_url') ?>/img/fake_encarts_08.jpg">
 		</div>
 	</div>
-			
+
 			<div class="columns small-12  medium-4 columns">
 	<img src="<?php bloginfo('template_url'); ?>/img/fake_widget_produits.jpg">
 	</div>
 			</div>
-	
-	
+
+
 
 <!-- /contenu -->
 <?php get_footer(); ?>
