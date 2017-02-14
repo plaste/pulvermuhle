@@ -41,12 +41,10 @@
 		<?php dynamic_sidebar( 'footer-widgets' ); ?>
 		<?php } ?>
 		<div id="col4" class="medium-12 large-4 columns">
-			
-	<div class="footer-logo"><a href="http://www.bioland.de/start.html" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/img/logos/bioland-footer2x.png" width="51"></a></div>
+			<div class="footer-logo"><a href="http://www.bio-suisse.ch/" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/img/logos/biosuisse-footer2x.png" width="68"></a></div>
+			<div class="footer-logo"><a href="http://www.bioland.de/start.html" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/img/logos/bioland-footer2x.png" width="51"></a></div>
 			<div class="footer-logo logo-ab"><a href="http://www.opaba.org/bioenalsace/consommer-bio/principes-ab" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/img/logos/Agriculture-Biologique-AB-footer2x.png" width="53"></a></div>
 			<div class="footer-logo"><a href="http://www.ecocert.fr/agriculture-biologique" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/img/logos/biosiegel-footer2x.png" width="70"></a></div>
-			<div class="footer-logo"><a href="http://www.bio-suisse.ch/" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/img/logos/biosuisse-footer2x.png" width="68"></a></div>
-			
 		</div>
 		</div>
 	</footer>

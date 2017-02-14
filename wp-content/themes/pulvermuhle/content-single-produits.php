@@ -93,8 +93,9 @@
 	</div>
 	<div class="entry-content">
 			
-			<?php $content=get_the_content();
-			echo "<p>".tronk($content, 120, "...")."</p>"; 
+			<?php 
+			// $content=get_the_content();
+			// echo "<p>".tronk($content, 120, "...")."</p>"; 
 			?>
 			
 		</div>

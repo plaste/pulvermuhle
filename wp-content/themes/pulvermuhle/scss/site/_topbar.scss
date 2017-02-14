@@ -82,6 +82,7 @@ line-height: inherit;
 	ul.top-bar-menu {
 		height: 72px;
 		line-height: 72px;
+		width:100%;
 	}
 	ul.top-bar-menu>li>a {
 		height: 72px;
@@ -325,47 +326,68 @@ line-height: inherit;
 }
 
 #preheader-bar {
-	height: rem-calc(100);
-	background-color: $brun;
-	div#logo {
-		float: left;
-		display: inline-block;
-		margin: 15px 15px 0 20px;
-	}
-	div#newsletter-form {
-		float: right;
-		display: inline-block;
-		width: rem-calc(240);
-		margin-right: 45px;
-		margin-top: rem-calc(10);
-		.title {
-			color: #f8fce9;
-			font-size: rem-calc(14);
-			font-weight: 700;
-			margin-bottom: rem-calc(5);
-		}
-	}
-	div#header-langues {
-		float: right;
-		display: inline-block;
-		width: rem-calc(155);
-		text-align: center;
-		line-height: 100px;
-		font-size: rem-calc(20);
-		color: #c9e55a;
-		text-transform: uppercase;
-		background: url(../img/langues-bg-strilles.png) center center no-repeat;
-		margin-right: 8px;
-		a, a span.icl_lang_sel_current {
-			color: rgba(255, 255, 255, .3);
-			text-decoration: none;
-			transition: color .3s;
-		}
-		a:hover,
-		a span.icl_lang_sel_current:hover {
-			color: #c9e55a;
-		}
-	}
+    height: rem-calc(100);
+    background-color: $brun;
+    div#logo {
+        float: left;
+        display: inline-block;
+        margin: 15px 15px 0 20px;
+    }
+    div#newsletter-form {
+        float: right;
+        display: inline-block;
+        width: rem-calc(140);
+        height: auto;
+        margin-right: 45px;
+        margin-top: rem-calc(10);
+        a.newsletter {
+            display: block;
+            height: 90px;
+            transition: background-image 700ms ease-in-out;
+            background: url(../img/newsletter.png) top left no-repeat;
+			background-size:50%;
+        }
+        a.newsletter:hover {
+            background: url(../img/newsletter-over.png) top left no-repeat;
+			background-size:50%;
+        }
+    }
+    div#header-logos {
+        float: right;
+        display: inline-block;
+        line-height: 100px;
+        margin-right: 20px;
+        a {
+            margin-right: 5px;
+            opacity: 1;
+            transition: opacity 700ms ease-in-out;
+        }
+        a:hover {
+            opacity: .5;
+        }
+    }
+    div#header-langues {
+        float: right;
+        display: inline-block;
+        width: rem-calc(155);
+        text-align: center;
+        line-height: 100px;
+        font-size: rem-calc(20);
+        color: #c9e55a;
+        text-transform: uppercase;
+        background: url(../img/langues-bg-strilles.png) center center no-repeat;
+        margin-right: 8px;
+        a,
+        a span.icl_lang_sel_current {
+            color: rgba(255, 255, 255, .3);
+            text-decoration: none;
+            transition: color .3s;
+        }
+        a:hover,
+        a span.icl_lang_sel_current:hover {
+            color: #c9e55a;
+        }
+    }
 }
 
 @media screen and (min-width: 1195px) and (max-width: 1289px) {
@@ -379,6 +401,7 @@ line-height: inherit;
 		top: -33px;
 	}
 }
+
 
 @media screen and (min-width: 1024px) and (max-width: 1194px) {
 	.top-bar-section ul li>a {

@@ -2,8 +2,18 @@
 * CSS récurrentes (colonnes, containeurs généraux, ...)
 */
 
+.move-right .exit-off-canvas {
+left:250px;
+background: rgba(255,255,255,0.0);
+}
+
 section.container {
-margin:0 rem-calc($body-LRmargin);
+//margin:0 rem-calc($body-LRmargin);
+margin:0 0;
+}
+
+.top-bar-container, .tab-bar {
+margin-bottom:0;
 }
 
 .clearer{
@@ -38,4 +48,8 @@ display:none !important;
 
 .row.white{
 background-color:$white;
+}
+
+iframe {
+border:none;
 }

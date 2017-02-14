@@ -19,7 +19,8 @@ $font-color-dark : #3b3429;
 $font-color-grey : #7d7d7d;
 $font-color-recettes : #726e6a;
 $font-color-footer: #676c53;
-
+$font-color-ivory: #f8fce9;
+$font-color-salad: #4d5728;
 
 // pulvermuhle couleurs
 $brun : #3b3429;
@@ -58,7 +59,7 @@ $couleur_nosproduits_dropdownborder : rgba(231,126,35,.5);
 
 $couleur_nosrecettes : #9c59b8;
 $couleur_nosrecettes_textes : #9c59b8;
-$couleur_nosrecettes_dropdownborder : rgba(51,72,0,.5);
+$couleur_nosrecettes_dropdownborder : rgba(156,89,184,.5);
 
 $couleur_faq : #f1c40f;
 $couleur_faq_textes : #c9a514;
@@ -191,8 +192,26 @@ $total-columns: 12;
 $column-gutter: rem-calc(0);
 
 // Media query breakpoints
+//$small-breakpoint:  em-calc(640);
+//$medium-breakpoint: em-calc(1024);
+
+//$large-breakpoint:  em-calc(1380);
+//$xlarge-breakpoint: em-calc(1920);
+
+//$small-range: (0em, 40em);
+//$medium-range: (40.063em, 64em);
+//$large-range: (64.063em, 86.250em);
+//$xlarge-range: (86.313em, 120em);
+//$xxlarge-range: (120.063em);
+
 $small-breakpoint:  em-calc(640);
-$medium-breakpoint: em-calc(1024);
-$topbar-breakpoint: em-calc(1024);
+$medium-breakpoint: em-calc(1280);
 $large-breakpoint:  em-calc(1380);
 $xlarge-breakpoint: em-calc(1920);
+$topbar-breakpoint: em-calc(1280);
+
+ $small-range:   (0, $small-breakpoint);
+ $medium-range:  ($small-breakpoint  + em-calc(1), $medium-breakpoint);
+ $large-range:   ($medium-breakpoint + em-calc(1), $large-breakpoint);
+ $xlarge-range:  ($large-breakpoint  + em-calc(1), $xlarge-breakpoint);
+ $xxlarge-range: ($xlarge-breakpoint + em-calc(1), em-calc(99999999));

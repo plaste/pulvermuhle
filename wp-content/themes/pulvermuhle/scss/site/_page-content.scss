@@ -61,7 +61,17 @@ padding:50px 35px 35px 35px;;
 		font-weight: 700;
 		line-height:rem-calc(60);
 		margin-bottom:rem-calc(40);
+		background: url(../img/radis-h1.png) 7px 7px no-repeat;
+        padding-left: 2.1em;
 	}
+	h2 {
+        background: url(../img/fraise-h2.png) 7px 9px no-repeat;
+        padding-left: 1em;
+    }
+    h3 {
+        background: url(../img/cerise-h3.png) 2px 3px no-repeat;
+        padding-left: 1em;
+    }
 	
 	b,strong {
 		color:$font-color-dark;
@@ -104,8 +114,21 @@ padding:50px 35px 35px 35px;;
 		background-color:$rouge;
 		margin:25px 0;
 	}
-	
-	
+
+}
+
+.accordion .accordion-navigation>.content, .accordion dd>.content {
+padding : 5px 15px;
+} 
+
+.accordion .accordion-navigation>a, .accordion dd>a {
+    padding: 5px 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.accordion dd>a:hover, .accordion dd.active>a {
+    text-decoration: none;
 }
 
 @media #{$small-only} {
@@ -115,5 +138,4 @@ padding:50px 35px 35px 35px;;
 		float:none;
 		display:block;
 	}
-	
 }

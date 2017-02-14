@@ -21,11 +21,15 @@
 		<div id="header-langues">
 		<?php languages_list_header(); ?>
 		</div>
-		<div id="newsletter-form">
-		<div class="title">Inscrivez-vous à la newsletter</div>
-		<?php get_template_part('parts/form', 'newsletter'); ?>
+		<div id="header-logos"> 
+		    <a href="http://www.agencebio.org/le-logo-bio-europeen"  target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/img/header-logos/BIOEUROPE.png" alt="logo bio-europe"></a>
+		    <a href="http://www.agencebio.org/la-marque-ab"  target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/img/header-logos/AB.png" alt="logo agriculture biologique"></a>
+		    <a href="http://www.bioland.de/start.html" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/img/header-logos/BIOLAND.png" alt="logo bio-land"></a>
+			<a href="http://www.bio-suisse.ch/fr/" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/img/header-logos/BIOSUISSE-logo.png" alt="logo bio-suisse"></a>
 		</div>
-		
+		<div id="newsletter-form">
+		    <a class="newsletter" href="/newsletter/"></a>
+		</div>
 	</div>
 </div>
 <div class="top-bar-container contain-to-grid show-for-large-up">

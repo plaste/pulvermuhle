@@ -1,0 +1,393 @@
+/*
+*
+*
+* Styles du header, menu principal et et coloration des rubriques
+* Couleurs des rubriques définies dans scss/config/_sutom-settings.scss
+*
+*
+*/
+
+// Add some whitespace between top bar and content
+.top-bar-container,
+.tab-bar {
+	margin-bottom: rem-calc(32);
+}
+
+.top-bar .name {
+	h1 a {
+		font-weight: 500;
+	}
+}
+
+// fade effect pour le menu déroulant (source : http://foundation.zurb.com/forum/posts/8268-idea-fade-in-top-menu-dropdowns---any-feedback)
+&.hover,
+&.not-click:hover {
+	& > .dropdown {
+		opacity: 1; //Add this line.
+	}
+}
+
+.dropdown {
+	opacity: 0; //Add this line.
+	@include single-transition(opacity, 500ms, ease); //Add this line.
+}
+
+.no-js .top-bar-section {
+	.has-dropdown {
+		&:hover {
+			& > .dropdown {
+				opacity: 1; //Add this line.
+			}
+		}
+	}
+}
+.top-bar-section li.active:not(.has-form) a:not(.button)  {
+line-height: inherit;
+}
+
+// end fade menu déroulant
+// A more subtle background color for the active menu item
+//.top-bar-section li.active:not(.has-form) a:not(.button)  {
+//	background: #272727;
+//}
+//.top-bar-section li.active:not(.has-form) a:hover:not(.button) {
+//	background: #202020;
+//}
+// Switch between the mobile menu (tab-bar) and desktop menu (topbar) based on a custom $topbar-breakpoint value.
+// The $topbar-breakpoint can be edited in _custom-settings.scss. 
+@media only screen and (min-width: ($topbar-breakpoint + em-calc(1))) {
+	.tab-bar {
+		display: none;
+	}
+}
+
+// Hide the topbar when the screen size is smaller than the topbar breakpoint
+@media only screen and (max-width: $topbar-breakpoint) {
+	.top-bar {
+		display: none;
+	}
+}
+
+// ---------------------------------------------------------
+// Pulvermuhle menu principal
+// ---------------------------------------------------------
+.top-bar-section {
+	ul.top-bar-menu>li,  {
+		width: auto;
+		max-width: 15%;
+	}
+	li a {
+		line-height: 1.4rem !important;
+	}
+	ul.top-bar-menu {
+		height: 72px;
+		line-height: 72px;
+	}
+	ul.top-bar-menu>li>a {
+		height: 72px;
+		//border-top:10px solid #FFF;
+		line-height: 52px !important;
+		text-align: center;
+		font-weight: 500;
+		text-transform: uppercase;
+		transition: all .3s;
+		padding: 12px 25px 0 29px !important;
+	}
+	//	ul.top-bar-menu>li>a:hover,ul.top-bar-menu>li>a.active  {
+	//		//border-top:10px solid #FFCC00;
+	//		box-shadow:inset 0px 10px 0px 0px $couleur_presentation;
+	//	}
+	ul.top-bar-menu>.divider {
+		width: 5px;
+		height: 5px;
+		background-color: #c8bfb0;
+		margin-top: 36px;
+	}
+	ul.top-bar-menu>.divider:first-child {
+		display: none;
+	}
+	ul.top-bar-menu>li.menu-item>ul.dropdown>li {
+		width: 100%;
+		background-color: #fff;
+	}
+	ul.top-bar-menu>li.menu-item>ul.dropdown>li a {
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		width: 100%;
+		line-height: 16px;
+		height: auto;
+		white-space: normal;
+		text-align: center;
+		padding: 20px 10px 20px 20px;
+		//border-left:1px solid #FFFFFF;
+		border-top: thin solid #CCC;
+		//border-bottom:thin solid #CCC;
+		transition: all .3s;
+		//box-shadow:inset 0px 0px 0px 0px #000;
+	}
+	// menus individuels, menus sur 2 lignes
+	ul.top-bar-menu>li.menu-item-81>a,
+	ul.top-bar-menu>li.menu-item-80>a,
+	ul.top-bar-menu>li.menu-item-87>a,
+	ul.top-bar-menu>li.menu-item-109>a {
+		line-height: rem-calc(20) !important;
+		padding-top: 20px;
+	}
+	ul.top-bar-menu>li:not(:first-child)::after {
+		content: "";
+		display: block;
+		width: 5px;
+		height: 5px;
+		position: relative;
+		background-color: #CCC;
+		left: 0;
+		top: -38px;
+		z-index: 500;
+	}
+	ul.top-bar-menu>li.menu-item-46>ul.dropdown {
+		transition: all .5s;
+	}
+	//-------------------------------------------------------
+	// couleurs par rubrique
+	//-------------------------------------------------------
+	// présentation
+	ul.top-bar-menu>li.menu-item-46>ul.dropdown>li a,
+	ul.top-bar-menu>li.menu-item-103>ul.dropdown>li a{
+		border-top: 1px solid $couleur_presentation_dropdownborder;
+	}
+	ul.top-bar-menu li.menu-item-46:hover > a,
+	ul.top-bar-menu li.menu-item-46.active > a,
+	ul.top-bar-menu li.menu-item-103:hover > a,
+	ul.top-bar-menu li.menu-item-103.active > a{
+		box-shadow: inset 0px 10px 0px 0px $couleur_presentation;
+		color: $couleur_presentation_textes;
+	}
+	ul.top-bar-menu > li.menu-item-46 > ul.dropdown >li a:hover,
+	ul.top-bar-menu>li.menu-item-46>ul.dropdown>li.active a,
+	ul.top-bar-menu > li.menu-item-103 > ul.dropdown >li a:hover,
+	ul.top-bar-menu>li.menu-item-103>ul.dropdown>li.active a{
+		box-shadow: inset 10px 0px 0px 0px $couleur_presentation;
+		color: $couleur_presentation_textes;
+	}
+	// actualités
+	ul.top-bar-menu>li.menu-item-56>ul.dropdown>li a,
+	ul.top-bar-menu>li.menu-item-104>ul.dropdown>li a {
+		border-top: 1px solid $couleur_actualites_dropdownborder;
+	}
+	ul.top-bar-menu li.menu-item-56:hover>a,
+	ul.top-bar-menu li.menu-item-56.active>a,
+	ul.top-bar-menu li.menu-item-104:hover>a,
+	ul.top-bar-menu li.menu-item-104.active>a {
+		box-shadow: inset 0px 10px 0px 0px $couleur_actualites;
+		color: $couleur_actualites_textes;
+	}
+	ul.top-bar-menu>li.menu-item-56>ul.dropdown>li a:hover,
+	ul.top-bar-menu>li.menu-item-56>ul.dropdown>li.active a,
+	ul.top-bar-menu>li.menu-item-104>ul.dropdown>li a:hover,
+	ul.top-bar-menu>li.menu-item-104>ul.dropdown>li.active a{
+		box-shadow: inset 10px 0px 0px 0px $couleur_actualites;
+		color: $couleur_actualites_textes;
+	}
+	// où trouver nos produits
+	ul.top-bar-menu>li.menu-item-81>ul.dropdown>li a,
+	ul.top-bar-menu>li.menu-item-105>ul.dropdown>li a {
+		border-top: 1px solid $couleur_outrouver_dropdownborder;
+	}
+	ul.top-bar-menu li.menu-item-81:hover>a,
+	ul.top-bar-menu li.menu-item-81.active>a,
+	ul.top-bar-menu li.menu-item-105:hover>a,
+	ul.top-bar-menu li.menu-item-105.active>a{
+		box-shadow: inset 0px 10px 0px 0px $couleur_outrouver;
+		color: $couleur_outrouver_textes;
+	}
+	ul.top-bar-menu>li.menu-item-81>ul.dropdown>li a:hover,
+	ul.top-bar-menu>li.menu-item-81>ul.dropdown>li.active a,
+	ul.top-bar-menu>li.menu-item-105>ul.dropdown>li a:hover,
+	ul.top-bar-menu>li.menu-item-105>ul.dropdown>li.active a{
+		box-shadow: inset 10px 0px 0px 0px $couleur_outrouver;
+		color: $couleur_outrouver_textes;
+	}
+	// la vente aux professionnels
+	ul.top-bar-menu>li.menu-item-80>ul.dropdown>li a,
+	ul.top-bar-menu>li.menu-item-109>ul.dropdown>li a{
+		border-top: 1px solid $couleur_lavente_dropdownborder;
+	}
+	ul.top-bar-menu li.menu-item-80:hover>a,
+	ul.top-bar-menu li.menu-item-80.active>a,
+	ul.top-bar-menu li.menu-item-109:hover>a,
+	ul.top-bar-menu li.menu-item-109.active>a{
+		box-shadow: inset 0px 10px 0px 0px $couleur_lavente;
+		color: $couleur_lavente_textes;
+	}
+	ul.top-bar-menu>li.menu-item-80>ul.dropdown>li a:hover,
+	ul.top-bar-menu>li.menu-item-80>ul.dropdown>li.active a,
+	ul.top-bar-menu>li.menu-item-109>ul.dropdown>li a:hover,
+	ul.top-bar-menu>li.menu-item-109>ul.dropdown>li.active a {
+		box-shadow: inset 10px 0px 0px 0px $couleur_lavente;
+		color: $couleur_lavente_textes;
+	}
+	// nos produits
+	ul.top-bar-menu>li.menu-item-87>ul.dropdown>li a,
+	ul.top-bar-menu>li.menu-item-110>ul.dropdown>li a {
+		border-top: 1px solid $couleur_nosproduits_dropdownborder;
+	}
+	ul.top-bar-menu li.menu-item-87:hover>a,
+	ul.top-bar-menu li.menu-item-87.active>a,
+	ul.top-bar-menu li.menu-item-110:hover>a,
+	ul.top-bar-menu li.menu-item-110.active>a {
+		box-shadow: inset 0px 10px 0px 0px $couleur_nosproduits;
+		color: $couleur_nosproduits_textes;
+	}
+	ul.top-bar-menu>li.menu-item-87>ul.dropdown>li a:hover,
+	ul.top-bar-menu>li.menu-item-87>ul.dropdown>li.active a,
+	ul.top-bar-menu>li.menu-item-110>ul.dropdown>li a:hover,
+	ul.top-bar-menu>li.menu-item-110>ul.dropdown>li.active a{
+		box-shadow: inset 10px 0px 0px 0px $couleur_nosproduits;
+		color: $couleur_nosproduits_textes;
+	}
+	// nos recettes
+	ul.top-bar-menu>li.menu-item-168>ul.dropdown>li a,
+	ul.top-bar-menu>li.menu-item-178>ul.dropdown>li a {
+		border-top: 1px solid $couleur_nosrecettes_dropdownborder;
+	}
+	ul.top-bar-menu li.menu-item-168:hover>a,
+	ul.top-bar-menu li.menu-item-168.active>a,
+	ul.top-bar-menu li.menu-item-178:hover>a,
+	ul.top-bar-menu li.menu-item-178.active>a{
+		box-shadow: inset 0px 10px 0px 0px $couleur_nosrecettes;
+		color: $couleur_nosrecettes_textes;
+	}
+	ul.top-bar-menu>li.menu-item-168>ul.dropdown>li a:hover,
+	ul.top-bar-menu>li.menu-item-168>ul.dropdown>li.active a,
+	ul.top-bar-menu>li.menu-item-178>ul.dropdown>li a:hover,
+	ul.top-bar-menu>li.menu-item-178>ul.dropdown>li.active a {
+		box-shadow: inset 10px 0px 0px 0px $couleur_nosrecettes;
+		color: $couleur_nosrecettes_textes;
+	}
+	// faq
+	ul.top-bar-menu>li.menu-item-86>ul.dropdown>li a,
+	ul.top-bar-menu>li.menu-item-112>ul.dropdown>li a {
+		border-top: 1px solid $couleur_faq_dropdownborder;
+	}
+	ul.top-bar-menu li.menu-item-86:hover>a,
+	ul.top-bar-menu li.menu-item-86.active>a,
+	ul.top-bar-menu li.menu-item-112:hover>a,
+	ul.top-bar-menu li.menu-item-112.active>a{
+		box-shadow: inset 0px 10px 0px 0px $couleur_faq;
+		color: $couleur_faq_textes;
+	}
+	ul.top-bar-menu>li.menu-item-86>ul.dropdown>li a:hover,
+	ul.top-bar-menu>li.menu-item-86>ul.dropdown>li.active a,
+	ul.top-bar-menu>li.menu-item-112>ul.dropdown>li a:hover,
+	ul.top-bar-menu>li.menu-item-112>ul.dropdown>li.active a{
+		box-shadow: inset 10px 0px 0px 0px $couleur_faq;
+		color: $couleur_faq_textes;
+	}
+	// contact
+	ul.top-bar-menu>li.menu-item-79>ul.dropdown>li a,
+	ul.top-bar-menu>li.menu-item-113>ul.dropdown>li a {
+		border-top: 1px solid $couleur_contact_dropdownborder;
+	}
+	ul.top-bar-menu li.menu-item-79:hover>a,
+	ul.top-bar-menu li.menu-item-79.active>a,
+	ul.top-bar-menu li.menu-item-113:hover>a,
+	ul.top-bar-menu li.menu-item-113.active>a{
+		box-shadow: inset 0px 10px 0px 0px $couleur_contact;
+		color: $couleur_contact_textes;
+	}
+	ul.top-bar-menu>li.menu-item-79>ul.dropdown>li a:hover,
+	ul.top-bar-menu>li.menu-item-79>ul.dropdown>li.active a,
+	ul.top-bar-menu>li.menu-item-113>ul.dropdown>li a:hover,
+	ul.top-bar-menu>li.menu-item-113>ul.dropdown>li.active a{
+		box-shadow: inset 10px 0px 0px 0px $couleur_contact;
+		color: $couleur_contact_textes;
+	}
+	
+	//	ul.top-bar-menu>li::after {
+	//		content:"";
+	//		display:block;
+	//		position:relative;
+	//		width:5px;
+	//		height:5px;
+	//		background-color:#c8bfb0;
+	//		right:0;
+	//		top:50%;
+	//	}
+	
+}
+
+// ---------------------------------------------------------
+// Pulvermühle preheader
+// ---------------------------------------------------------
+.preheader-container {
+	background-color: $brun;
+}
+
+#preheader-bar {
+	height: rem-calc(100);
+	background-color: $brun;
+	div#logo {
+		float: left;
+		display: inline-block;
+		margin: 15px 15px 0 20px;
+	}
+	div#newsletter-form {
+		float: right;
+		display: inline-block;
+		width: rem-calc(240);
+		margin-right: 45px;
+		margin-top: rem-calc(10);
+		.title {
+			color: #f8fce9;
+			font-size: rem-calc(14);
+			font-weight: 700;
+			margin-bottom: rem-calc(5);
+		}
+	}
+	div#header-langues {
+		float: right;
+		display: inline-block;
+		width: rem-calc(155);
+		text-align: center;
+		line-height: 100px;
+		font-size: rem-calc(20);
+		color: #c9e55a;
+		text-transform: uppercase;
+		background: url(../img/langues-bg-strilles.png) center center no-repeat;
+		margin-right: 8px;
+		a, a span.icl_lang_sel_current {
+			color: rgba(255, 255, 255, .3);
+			text-decoration: none;
+			transition: color .3s;
+		}
+		a:hover,
+		a span.icl_lang_sel_current:hover {
+			color: #c9e55a;
+		}
+	}
+}
+
+@media screen and (min-width: 1195px) and (max-width: 1289px) {
+	.top-bar-section ul li>a {
+		font-size: rem-calc(14);
+	}
+	.top-bar-section ul.top-bar-menu>li>a {
+		padding: 17px 13px 0 23px  !important;
+	}
+	.top-bar-section ul.top-bar-menu>li:not(:first-child)::after {
+		top: -33px;
+	}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1194px) {
+	.top-bar-section ul li>a {
+		font-size: rem-calc(14);
+	}
+	.top-bar-section ul.top-bar-menu>li>a {
+		padding: 10px 13px 0 15px  !important;
+	}
+	.top-bar-section ul.top-bar-menu>li:not(:first-child)::after {
+		top: -33px;
+	}
+}

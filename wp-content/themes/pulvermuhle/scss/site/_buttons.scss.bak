@@ -1,0 +1,74 @@
+.green-btn {
+    color: #f8fce9;
+    font-size: 16px;
+    background: transparent;
+    padding: 15px 30px 15px 30px;
+    border: 2px solid #fff;
+    text-decoration: none;
+	transition:all .5s;
+}
+
+.green-btn:hover {
+    background: rgba(201, 229, 90, .5);
+    text-decoration: none;
+	color:#FFF;
+	border: 2px solid #fff !important;
+}
+
+
+// application couleurs encarts/hovers
+.view.insert-presentation:hover .green-btn {
+	 border: 2px solid #c9e55a;
+	
+}
+.view.insert-presentation .green-btn:hover {
+	background: rgba(201, 229, 90, .5);
+}
+.view.insert-presentation.set1:hover .green-btn {
+	 border: 2px solid #c9e55a;
+}
+.view.insert-presentation.set1 .green-btn:hover {
+	background: rgba(201, 229, 90, .5);
+}
+.view.insert-presentation.set2:hover .green-btn {
+	 border: 2px solid #eb6b5f;
+}
+.view.insert-presentation.set2 .green-btn:hover {
+	background: rgba(235,107,95,.5);
+}
+.view.insert-presentation.set3:hover .green-btn {
+	 border: 2px solid #00d8eb;
+}
+.view.insert-presentation.set3 .green-btn:hover {
+	background: rgba(0,216,235,.5);
+}
+.view.insert-presentation.set4:hover .green-btn {
+	 border: 2px solid #89d9b1;
+}
+.view.insert-presentation.set4 .green-btn:hover {
+	background: rgba(137,217,177,.5);
+}
+.view.insert-presentation.set5:hover .green-btn {
+	 border: 2px solid #e77e23;
+}
+.view.insert-presentation.set5 .green-btn:hover {
+	background: rgba(231,126,35,.5);
+}
+.view.insert-presentation.set6:hover .green-btn {
+	 border: 2px solid #9c59b8;
+}
+.view.insert-presentation.set6 .green-btn:hover {
+	background: rgba(156,89,184,.5);
+}
+.view.insert-presentation.set7:hover .green-btn {
+	 border: 2px solid #f1c40f;
+}
+.view.insert-presentation.set7 .green-btn:hover {
+	background: rgba(241,196,15,.5);
+}
+.view.insert-presentation.set8:hover .green-btn {
+	 border: 2px solid #759201;
+}
+.view.insert-presentation.set8 .green-btn:hover {
+	background: rgba(117,146,1,.5);
+}

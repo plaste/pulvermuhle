@@ -1,0 +1,98 @@
+        // pages 404
+        .page-404 {
+            padding-top: 2em;
+            text-align: center;
+            background: url(../img/salade-404.jpg) center center no-repeat;
+            -webkit-background-size: cover;
+            /* pour anciens Chrome et Safari */
+            background-size: cover;
+            /* version standardisée */
+            overflow: hidden;
+        }
+        
+        .page-404 img.watering {
+            display: block;
+            margin: 7em auto 5em auto;
+        }
+        
+        .page-404 button.btn-404,
+        .page-404 button.btn-404-small {
+            display: block;
+            margin: 0 auto 5em auto;
+        }
+        
+        .page-404 h1 {
+            font-family: $typo-titres;
+            font-size: rem-calc(160);
+            line-height: rem-calc(250);
+            color: $font-color-ivory;
+        }
+        
+        .page-404 p {
+            font-size: rem-calc(28);
+            line-height: rem-calc(36);
+            color: $font-color-ivory;
+            margin-bottom: 1em;
+        }
+        
+        @media screen and (max-width: 790px) {
+            .page-404 h1 {
+                font-size: rem-calc(100);
+                line-height: rem-calc(170);
+            }
+            .page-404 p {
+                font-size: 1.5rem;
+                line-height: 1.75rem;
+            }
+        }
+        
+        @media screen and (max-width: 641px) {
+            article.page-404 {
+                margin: 1.5rem auto 3.75rem auto;
+            }
+        }
+        
+        @media screen and (max-width: 500px) {
+            .page-404 h1 {
+                font-size: rem-calc(75);
+                line-height: rem-calc(110);
+            }
+            .page-404 p {
+                font-size: rem-calc(16);
+                line-height: rem-calc(14);
+            }
+            .page-404 img.watering {
+                margin: 4em auto 4em auto;
+            }
+            .page-404 button.btn-404 {
+                margin: 0 auto 3em auto;
+            }
+        }
+        
+        @media screen and (max-width: 430px) {
+            .page-404 h1 {
+                font-size: rem-calc(45);
+                line-height: rem-calc(70);
+            }
+            .page-404 p {
+                font-size: 0.875rem;
+                line-height: 1.3rem;
+                width: 60%;
+                margin: auto;
+                margin-bottom: 2em;
+            }
+            .page-404 img.watering {
+                margin: 2em auto 2em auto;
+                transform: scale(.5)
+            }
+            .page-404 {
+                padding-top: 0em;
+            }
+            article.page-404 {
+                padding-top: 2em;
+            }
+            .page-404 button.btn-404-small {
+                display: block;
+                margin: 0 auto 3em auto;
+            }
+        }

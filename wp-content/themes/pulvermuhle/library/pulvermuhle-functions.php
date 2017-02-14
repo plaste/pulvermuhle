@@ -208,4 +208,20 @@ function soliloquy_disable_mobile_lightbox( ) {
 	}
 }
 add_action( 'plugins_loaded', 'soliloquy_disable_mobile_lightbox', 99 );
+
+
+function wpse_167441_reorder_calendar($query) {
+  if ( !is_admin() && $query->is_main_query() ) {
+
+    if (is_post_type_archive('produits') || $query->is_tax( 'categorie-de-produits' ) ) {
+      $query->set('orderby', 'title' );
+      $query->set('order', 'ASC' );
+    }
+
+  }
+}
+
+add_action('pre_get_posts','wpse_167441_reorder_calendar');
+
+
 ?>
