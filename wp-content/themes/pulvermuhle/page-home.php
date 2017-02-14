@@ -5,12 +5,17 @@ Template Name: page d'accueil
 get_header(); ?>
 
 <!-- contenu -->
-<div class="row" data-equalizer>
+<div class="row">
 	
-	<div class="small-12 large-8 columns" >
+	<div class="row" data-equalizer>
+		
+	<div class="small-12 large-8 columns" data-equalizer-watch>
 	
-		<div class="small-12 medium-6 columns show-for-large-up" role="presentation" data-equalizer-watch>
-			<img src="<?php bloginfo('template_url') ?>/img/fake_encarts_03.jpg">
+		<div class="small-12 large-6 columns show-for-large-up" role="presentation" data-equalizer-watch>
+			<!-- left home sidebar -->
+			<?php do_action( 'foundationpress_before_sidebar' ); ?>
+			<?php dynamic_sidebar( 'sidebar-home-left' ); ?>
+			<?php do_action( 'foundationpress_after_sidebar' ); ?>
 		</div>
 		<div id="home-actualites" class="small-12 large-6 columns" role="main" data-equalizer-watch>
 			<header>
@@ -60,30 +65,39 @@ get_header(); ?>
 		<div class="small-12 large-4 columns" data-equalizer-watch>
 	<!-- encarts en image (provisoires) -->
 	<div class="row">
-	<div class="columns small-6 medium-4 large-12">
-	<img src="<?php bloginfo('template_url'); ?>/img/fake_widget_recettes.jpg">
-	</div><div class="columns  small-6  medium-4 large-12">
-	<img src="<?php bloginfo('template_url'); ?>/img/fake_widget_image_2.jpg">
+	<div class="columns small-12 large-12">
+<?php do_action( 'foundationpress_before_sidebar' ); ?>
+			<?php dynamic_sidebar( 'sidebar-widgets' ); ?>
+			<?php do_action( 'foundationpress_after_sidebar' ); ?>
+	</div><div class="columns  small-12  show-for-large-up">
+		<?php get_template_part("parts/random-image"); ?>
 	</div>
 			</div>
 		
 	</div>
+		
+	</div>
 	
-	
-	<div class="row">
-		<div class="small-12 medium-8 columns">
-		<div class="small-12 columns show-for-medium-up">
-			<img src="<?php bloginfo('template_url') ?>/img/fake_encarts_05.jpg">
+	<div class="row" data-equalizer>
+		<div class="small-12 large-8 columns" data-equalizer-watch>
+		<div class="small-12 columns show-for-large-up">
+						<img src="<?php bloginfo('template_url') ?>/img/fake_encarts_05.jpg">
 		</div>
-		<div class="small-12 columns show-for-medium-up" role="main">
-			<img src="<?php bloginfo('template_url') ?>/img/fake_encarts_08.jpg">
+		<div class="small-12 columns" role="main">
+<!--			<img src="<?php bloginfo('template_url') ?>/img/fake_encarts_08.jpg">-->
+			<?php do_action( 'foundationpress_before_sidebar' ); ?>
+			<?php dynamic_sidebar( 'sidebar-home-bottom' ); ?>
+			<?php do_action( 'foundationpress_after_sidebar' ); ?>
 		</div>
 	</div>
 			
-			<div class="columns small-12  medium-4 columns">
-	<img src="<?php bloginfo('template_url'); ?>/img/fake_widget_produits.jpg">
+	<div class="columns small-12 large-4 columns" data-equalizer-watch>
+			<!-- right home bottom sidebar -->
+			<?php do_action( 'foundationpress_before_sidebar' ); ?>
+			<?php dynamic_sidebar( 'sidebar-home-widgets-2' ); ?>
+			<?php do_action( 'foundationpress_after_sidebar' ); ?>
 	</div>
-			</div>
+	</div>
 	
 	
 
